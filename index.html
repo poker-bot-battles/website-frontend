@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>poker_game_runner 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="canonical" href="https://poker-game-runner.readthedocs.io/en/latest/index.html" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> poker_game_runner
+          </a>
+              <div class="version">
+                latest
+              </div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-poker_game_runner">poker_game_runner</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">poker_game_runner</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li>poker_game_runner 0.1 documentation</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/bovle/poker_game_runner/blob/main/docs/source/index" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="welcome-to-poker-game-runner-s-documentation">
+<h1>Welcome to poker_game_runner’s documentation!<a class="headerlink" href="#welcome-to-poker-game-runner-s-documentation" title="Permalink to this headline"></a></h1>
+<div class="toctree-wrapper compound">
+<span id="document-poker_game_runner"></span><section id="poker-game-runner">
+<h2>poker_game_runner<a class="headerlink" href="#poker-game-runner" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation">
+<em class="property"><span class="pre">class</span><span class="w">  </span></em><span class="sig-prename descclassname"><span class="pre">poker_game_runner.state.</span></span><span class="sig-name descname"><span class="pre">Observation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">small_blind</span></span><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">big_blind</span></span><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">my_hand</span></span><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">my_index</span></span><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">board_cards</span></span><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">player_infos</span></span><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="index.html#poker_game_runner.state.PlayerInfo" title="poker_game_runner.state.PlayerInfo"><span class="pre">poker_game_runner.state.PlayerInfo</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">history</span></span><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="index.html#poker_game_runner.state.ActionInfo" title="poker_game_runner.state.ActionInfo"><span class="pre">poker_game_runner.state.ActionInfo</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_round</span></span><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">legal_actions</span></span><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#poker_game_runner.state.Observation" title="Permalink to this definition"></a></dt>
+<dd><p>A class representing the state of the game</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation.small_blind">
+<span class="sig-name descname"><span class="pre">small_blind</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="pre">int</span></em><a class="headerlink" href="#poker_game_runner.state.Observation.small_blind" title="Permalink to this definition"></a></dt>
+<dd><p>The current small blind</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation.big_blind">
+<span class="sig-name descname"><span class="pre">big_blind</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="pre">int</span></em><a class="headerlink" href="#poker_game_runner.state.Observation.big_blind" title="Permalink to this definition"></a></dt>
+<dd><p>The current big blind</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation.my_hand">
+<span class="sig-name descname"><span class="pre">my_hand</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#poker_game_runner.state.Observation.my_hand" title="Permalink to this definition"></a></dt>
+<dd><p>The cards in the current players hand</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation.my_index">
+<span class="sig-name descname"><span class="pre">my_index</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="pre">int</span></em><a class="headerlink" href="#poker_game_runner.state.Observation.my_index" title="Permalink to this definition"></a></dt>
+<dd><p>The index of the current player out of all players in the game</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation.board_cards">
+<span class="sig-name descname"><span class="pre">board_cards</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#poker_game_runner.state.Observation.board_cards" title="Permalink to this definition"></a></dt>
+<dd><p>The community cards on the board</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation.player_infos">
+<span class="sig-name descname"><span class="pre">player_infos</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="index.html#poker_game_runner.state.PlayerInfo" title="poker_game_runner.state.PlayerInfo"><span class="pre">poker_game_runner.state.PlayerInfo</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#poker_game_runner.state.Observation.player_infos" title="Permalink to this definition"></a></dt>
+<dd><p>Current state of all players in the game</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation.history">
+<span class="sig-name descname"><span class="pre">history</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="index.html#poker_game_runner.state.ActionInfo" title="poker_game_runner.state.ActionInfo"><span class="pre">poker_game_runner.state.ActionInfo</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#poker_game_runner.state.Observation.history" title="Permalink to this definition"></a></dt>
+<dd><p>The history of all actions taken so far grouped by game round</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation.current_round">
+<span class="sig-name descname"><span class="pre">current_round</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="pre">int</span></em><a class="headerlink" href="#poker_game_runner.state.Observation.current_round" title="Permalink to this definition"></a></dt>
+<dd><p>The current game round</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation.legal_actions">
+<span class="sig-name descname"><span class="pre">legal_actions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#poker_game_runner.state.Observation.legal_actions" title="Permalink to this definition"></a></dt>
+<dd><p>all legal actions</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation.get_my_player_info">
+<span class="sig-name descname"><span class="pre">get_my_player_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poker_game_runner.state.Observation.get_my_player_info" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the PlayerInfo of the current player</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="index.html#poker_game_runner.state.PlayerInfo" title="poker_game_runner.state.PlayerInfo">PlayerInfo</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation.get_my_hand_type">
+<span class="sig-name descname"><span class="pre">get_my_hand_type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poker_game_runner.state.Observation.get_my_hand_type" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the hand type of the current player</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="index.html#poker_game_runner.state.HandType" title="poker_game_runner.state.HandType">HandType</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation.get_board_hand_type">
+<span class="sig-name descname"><span class="pre">get_board_hand_type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poker_game_runner.state.Observation.get_board_hand_type" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the hand type of the board cards</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="index.html#poker_game_runner.state.HandType" title="poker_game_runner.state.HandType">HandType</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation.get_player_count">
+<span class="sig-name descname"><span class="pre">get_player_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poker_game_runner.state.Observation.get_player_count" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the number of players in the tournament</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation.get_active_players">
+<span class="sig-name descname"><span class="pre">get_active_players</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poker_game_runner.state.Observation.get_active_players" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the number of players that are active in the hand (have not folded)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Tuple[<a class="reference internal" href="index.html#poker_game_runner.state.PlayerInfo" title="poker_game_runner.state.PlayerInfo">PlayerInfo</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation.get_actions_this_round">
+<span class="sig-name descname"><span class="pre">get_actions_this_round</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poker_game_runner.state.Observation.get_actions_this_round" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the ActionInfo’s from the current round</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Tuple[<a class="reference internal" href="index.html#poker_game_runner.state.ActionInfo" title="poker_game_runner.state.ActionInfo">ActionInfo</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation.get_actions_in_round">
+<span class="sig-name descname"><span class="pre">get_actions_in_round</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">round_num</span></span><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#poker_game_runner.state.Observation.get_actions_in_round" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the ActionInfo’s from the given round</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Tuple[<a class="reference internal" href="index.html#poker_game_runner.state.ActionInfo" title="poker_game_runner.state.ActionInfo">ActionInfo</a>]</p>
+</dd>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>round_num</strong> (<em>int</em>) – the round to fetch actions from (0,1,2 or 3)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation.get_max_spent">
+<span class="sig-name descname"><span class="pre">get_max_spent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poker_game_runner.state.Observation.get_max_spent" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the max spent from any player this game</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation.get_call_size">
+<span class="sig-name descname"><span class="pre">get_call_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poker_game_runner.state.Observation.get_call_size" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the amount to call</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation.get_pot_size">
+<span class="sig-name descname"><span class="pre">get_pot_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poker_game_runner.state.Observation.get_pot_size" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the amount in the pot</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation.can_raise">
+<span class="sig-name descname"><span class="pre">can_raise</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poker_game_runner.state.Observation.can_raise" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>true if the current player can raise</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation.get_min_raise">
+<span class="sig-name descname"><span class="pre">get_min_raise</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poker_game_runner.state.Observation.get_min_raise" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the minimum possible raise. Will return 1 (call) if the current player cannot raise</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation.get_max_raise">
+<span class="sig-name descname"><span class="pre">get_max_raise</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poker_game_runner.state.Observation.get_max_raise" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the maximum possible raise (all in). Will return 1 (call) if the current player cannot raise</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="poker_game_runner.state.Observation.get_fraction_pot_raise">
+<span class="sig-name descname"><span class="pre">get_fraction_pot_raise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frac</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#poker_game_runner.state.Observation.get_fraction_pot_raise" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the raise size in relation to the pot</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>frac</strong> (<em>float</em>) – The relative size of the pot to raise</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="poker_game_runner.state.PlayerInfo">
+<em class="property"><span class="pre">class</span><span class="w">  </span></em><span class="sig-prename descclassname"><span class="pre">poker_game_runner.state.</span></span><span class="sig-name descname"><span class="pre">PlayerInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spent</span></span><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stack</span></span><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">active</span></span><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#poker_game_runner.state.PlayerInfo" title="Permalink to this definition"></a></dt>
+<dd><p>A class to represent the state of a player</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.PlayerInfo.spent">
+<span class="sig-name descname"><span class="pre">spent</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="pre">int</span></em><a class="headerlink" href="#poker_game_runner.state.PlayerInfo.spent" title="Permalink to this definition"></a></dt>
+<dd><p>the amount the player has spent in this game</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.PlayerInfo.stack">
+<span class="sig-name descname"><span class="pre">stack</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="pre">int</span></em><a class="headerlink" href="#poker_game_runner.state.PlayerInfo.stack" title="Permalink to this definition"></a></dt>
+<dd><p>the amount the player has left</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.PlayerInfo.active">
+<span class="sig-name descname"><span class="pre">active</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="pre">bool</span></em><a class="headerlink" href="#poker_game_runner.state.PlayerInfo.active" title="Permalink to this definition"></a></dt>
+<dd><p>true if the player has not folded in this game</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="poker_game_runner.state.ActionInfo">
+<em class="property"><span class="pre">class</span><span class="w">  </span></em><span class="sig-prename descclassname"><span class="pre">poker_game_runner.state.</span></span><span class="sig-name descname"><span class="pre">ActionInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player</span></span><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#poker_game_runner.state.ActionInfo" title="Permalink to this definition"></a></dt>
+<dd><p>A class to represent the action of a player</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.ActionInfo.player">
+<span class="sig-name descname"><span class="pre">player</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="pre">int</span></em><a class="headerlink" href="#poker_game_runner.state.ActionInfo.player" title="Permalink to this definition"></a></dt>
+<dd><p>the index of the player taking this action</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.ActionInfo.action">
+<span class="sig-name descname"><span class="pre">action</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="pre">int</span></em><a class="headerlink" href="#poker_game_runner.state.ActionInfo.action" title="Permalink to this definition"></a></dt>
+<dd><p>the action of the player</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="poker_game_runner.state.HandType">
+<em class="property"><span class="pre">class</span><span class="w">  </span></em><span class="sig-prename descclassname"><span class="pre">poker_game_runner.state.</span></span><span class="sig-name descname"><span class="pre">HandType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#poker_game_runner.state.HandType" title="Permalink to this definition"></a></dt>
+<dd><p>enum of poker hand types with valus</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.HandType.STRAIGHTFLUSH">
+<span class="sig-name descname"><span class="pre">STRAIGHTFLUSH</span></span><em class="property"><span class="w">  </span><span class="p"><span class="pre">=</span></span><span class="w">  </span><span class="pre">9</span></em><a class="headerlink" href="#poker_game_runner.state.HandType.STRAIGHTFLUSH" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.HandType.FOUROFAKIND">
+<span class="sig-name descname"><span class="pre">FOUROFAKIND</span></span><em class="property"><span class="w">  </span><span class="p"><span class="pre">=</span></span><span class="w">  </span><span class="pre">8</span></em><a class="headerlink" href="#poker_game_runner.state.HandType.FOUROFAKIND" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.HandType.FULLHOUSE">
+<span class="sig-name descname"><span class="pre">FULLHOUSE</span></span><em class="property"><span class="w">  </span><span class="p"><span class="pre">=</span></span><span class="w">  </span><span class="pre">7</span></em><a class="headerlink" href="#poker_game_runner.state.HandType.FULLHOUSE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.HandType.FLUSH">
+<span class="sig-name descname"><span class="pre">FLUSH</span></span><em class="property"><span class="w">  </span><span class="p"><span class="pre">=</span></span><span class="w">  </span><span class="pre">6</span></em><a class="headerlink" href="#poker_game_runner.state.HandType.FLUSH" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.HandType.STRAIGHT">
+<span class="sig-name descname"><span class="pre">STRAIGHT</span></span><em class="property"><span class="w">  </span><span class="p"><span class="pre">=</span></span><span class="w">  </span><span class="pre">5</span></em><a class="headerlink" href="#poker_game_runner.state.HandType.STRAIGHT" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.HandType.THREEOFAKIND">
+<span class="sig-name descname"><span class="pre">THREEOFAKIND</span></span><em class="property"><span class="w">  </span><span class="p"><span class="pre">=</span></span><span class="w">  </span><span class="pre">4</span></em><a class="headerlink" href="#poker_game_runner.state.HandType.THREEOFAKIND" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.HandType.TWOPAIR">
+<span class="sig-name descname"><span class="pre">TWOPAIR</span></span><em class="property"><span class="w">  </span><span class="p"><span class="pre">=</span></span><span class="w">  </span><span class="pre">3</span></em><a class="headerlink" href="#poker_game_runner.state.HandType.TWOPAIR" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.HandType.PAIR">
+<span class="sig-name descname"><span class="pre">PAIR</span></span><em class="property"><span class="w">  </span><span class="p"><span class="pre">=</span></span><span class="w">  </span><span class="pre">2</span></em><a class="headerlink" href="#poker_game_runner.state.HandType.PAIR" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.HandType.HIGHCARD">
+<span class="sig-name descname"><span class="pre">HIGHCARD</span></span><em class="property"><span class="w">  </span><span class="p"><span class="pre">=</span></span><span class="w">  </span><span class="pre">1</span></em><a class="headerlink" href="#poker_game_runner.state.HandType.HIGHCARD" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poker_game_runner.state.HandType.ERROR">
+<span class="sig-name descname"><span class="pre">ERROR</span></span><em class="property"><span class="w">  </span><span class="p"><span class="pre">=</span></span><span class="w">  </span><span class="pre">0</span></em><a class="headerlink" href="#poker_game_runner.state.HandType.ERROR" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="poker_game_runner.utils.Range">
+<em class="property"><span class="pre">class</span><span class="w">  </span></em><span class="sig-prename descclassname"><span class="pre">poker_game_runner.utils.</span></span><span class="sig-name descname"><span class="pre">Range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rangeStr</span></span><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#poker_game_runner.utils.Range" title="Permalink to this definition"></a></dt>
+<dd><p>A class representing a range of hands</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rangeStr</strong> (<em>str</em>) – The range string representing a range of hands. The range string can be generated at ‘<a class="reference external" href="https://www.pokerhandrange.com/">https://www.pokerhandrange.com/</a>’</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="poker_game_runner.utils.Range.is_hand_in_range">
+<span class="sig-name descname"><span class="pre">is_hand_in_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handCards</span></span><span class="p"><span class="pre">:</span></span><span class="w">  </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#poker_game_runner.utils.Range.is_hand_in_range" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>true if the given hand is in this range</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>handCards</strong> (<em>Tuple</em><em>[</em><em>str</em><em>]</em>) – The hand cards to check for</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Frederik Lund, Troels Krøgh, Jakob Harder.
+      <span class="commit">Revision <code>6309d2c0</code>.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/en/latest/">latest</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Downloads</dt>
+        
+          <dd><a href="//poker-game-runner.readthedocs.io/_/downloads/en/latest/pdf/">pdf</a></dd>
+        
+          <dd><a href="//poker-game-runner.readthedocs.io/_/downloads/en/latest/htmlzip/">html</a></dd>
+        
+          <dd><a href="//poker-game-runner.readthedocs.io/_/downloads/en/latest/epub/">epub</a></dd>
+        
+      </dl>
+      <dl>
+        
+        <dt>On Read the Docs</dt>
+          <dd>
+            <a href="//readthedocs.org/projects/poker-game-runner/?fromdocs=poker-game-runner">Project Home</a>
+          </dd>
+          <dd>
+            <a href="//readthedocs.org/builds/poker-game-runner/?fromdocs=poker-game-runner">Builds</a>
+          </dd>
+      </dl>
+    </div>
+  </div>
+<script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
