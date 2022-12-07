@@ -28,4 +28,14 @@ body {
     font-size: 18px;
     border-radius: 4px;
   }
+
+  .call-to-action {
+    background-color: forestgreen;
+    padding: 12px;
+    font-weight: bold;
+  }
+
+  .link-button {
+    margin: 12px;
+  }
   
