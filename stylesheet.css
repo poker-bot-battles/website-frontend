@@ -5,6 +5,7 @@ body {
     background-color: #f1f1f1;
     background-image: url('bg.png');
     background-position: center;
+    background-repeat: repeat-y;
 }
 
 div#logo-wrapper {
