@@ -3,8 +3,21 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f1f1f1;
-  }
-  
+    background-image: url('bg.png');
+    background-position: center;
+}
+
+div#logo-wrapper {
+  text-align: center;
+}
+
+#logo {
+  width: 25%;
+  height: 25%;
+  margin: -100px;
+  margin-top: 50px;
+  overflow: hidden;
+}
   h1 {
     color: rgb(204, 19, 19);
     text-align: center;
