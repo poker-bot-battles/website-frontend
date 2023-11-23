@@ -1,332 +1,135 @@
 <!DOCTYPE html>
-<!-- saved from url=(0026)http://localhost:5274/docs -->
-<html
-    lang="en"
-    style="
-        --blazor-load-percentage: 100%;
-        --blazor-load-percentage-text: '100%';
-    "
->
+<html lang="en">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Documentation | Poker Bot Battles x Netcompany</title>
 
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-        />
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+        </style>
 
-        <!--<base href="/">-->
-        <base href="." />
-        <link
-            href="./bootstrap.min.css"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="./material-base.css"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            href="http://localhost:5274/favicon.png"
-        />
-        <link
-            href="./Blazor.styles.css"
-            rel="stylesheet"
-        />
-        <link
-            href="./loading.css"
-            rel="stylesheet"
-        />
-        <link
-            rel="modulepreload"
-            href="http://localhost:5274/_framework/dotnet.7.0.13.lyxethg6ou.js"
-            crossorigin="anonymous"
-            integrity="sha256-eRbsSkKiWKWKcMiqy13LuLSBIpzmn52qw/6SX+1jNQ0="
-        />
-        <!--!-->
-        <title>PokerBot - Documentation</title>
-        <!--!-->
-        <!--!-->
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="../sidebar.css" />
     </head>
-
-    <body class="vsc-initialized">
-        <script src="./Radzen.Blazor.js.download"></script>
-        <script
-            src="./blazor.webassembly.js.download"
-            autostart="false"
-        ></script>
-        <div id="app">
-            <!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><!--!-->
-            <link
-                rel="stylesheet"
-                href="./site.css"
-                type="text/css"
-                b-qt6tgh2907=""
-            />
-
-            <div class="page" b-qt6tgh2907="">
-                <div class="sidebar" b-qt6tgh2907="">
-                    <!--!-->
-                    <div
-                        class="top-row ps-3 navbar navbar-dark"
-                        b-32xpj7b96w=""
+    <body>
+        <nav class="sidebar">
+            <ul>
+                <li class="main"><a href="/">Poker Bot Battle</a></li>
+                <li class="nav"><a href="/docs/">Documentation</a></li>
+                <li class="nav">
+                    <a href="https://replit.com/@Hetling/ITU-poker-bot-battle"
+                        >Code here!</a
                     >
-                        <div class="container-fluid" b-32xpj7b96w="">
-                            <!--!--><a
-                                class="navbar-brand"
-                                href="http://localhost:5274/"
-                                b-32xpj7b96w=""
-                                >PokerBot Battles</a
-                            >
-                            <button
-                                title="Navigation menu"
-                                class="navbar-toggler"
-                                b-32xpj7b96w=""
-                            >
-                                <!--!--><span
-                                    class="navbar-toggler-icon"
-                                    b-32xpj7b96w=""
-                                ></span>
-                            </button>
-                        </div>
-                    </div>
-                    <!--!-->
+                </li>
+                <li class="nav"><a href="/submit">Submit file</a></li>
+            </ul>
+        </nav>
+        <main>
+            <article>
+                <h1>Documentation</h1>
+                <p>
+                    This is the the stripped down version of the full
+                    documentation that will help you get started with your first
+                    Poker Bot Battle script. If you want the full overview of
+                    the documentation you can follow this
+                    <a
+                        href="https://poker-game-runner.readthedocs.io/en/latest/poker_game_runner.html"
+                        >link</a
+                    >.
+                </p>
 
-                    <div class="collapse nav-scrollable" b-32xpj7b96w="">
-                        <nav class="flex-column" b-32xpj7b96w="">
-                            <div class="nav-item px-3" b-32xpj7b96w="">
-                                <!--!--><a
-                                    href="http://localhost:5274/docs"
-                                    class="nav-link active"
-                                    ><!--!--><span
-                                        class="oi oi-plus"
-                                        aria-hidden="true"
-                                        b-32xpj7b96w=""
-                                    ></span>
-                                    Documentation
-                                </a>
-                            </div>
-                            <!--!-->
-                            <!--!-->
-                            <div class="nav-item px-3" b-32xpj7b96w="">
-                                <a
-                                    class="nav-link"
-                                    target="_blank"
-                                    href="https://replit.com/@Hetling/ITU-poker-bot-battle"
-                                    b-32xpj7b96w=""
-                                    ><span
-                                        class="oi oi-list"
-                                        aria-hidden="true"
-                                        b-32xpj7b96w=""
-                                    ></span>
-                                    Replit
-                                </a>
-                            </div>
-                            <div class="nav-item px-3" b-32xpj7b96w="">
-                                <!--!--><a
-                                    href="http://localhost:5274/submit"
-                                    class="nav-link"
-                                    ><!--!--><span
-                                        class="oi oi-list-rich"
-                                        aria-hidden="true"
-                                        b-32xpj7b96w=""
-                                    ></span>
-                                    Submit file
-                                </a>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-                <!--!-->
+                <h2>Getting Started</h2>
+                <h3>Basics</h3>
+                <p>The function called 'act' has to return either:</p>
+                <ul>
+                    <li>
+                        0 is to fold, or check if no previous bot has raised
+                    </li>
+                    <li>
+                        1 is to call, or check if no previous bot has raised
+                    </li>
+                    <li>&gt;1 is for raising a specific amount</li>
+                </ul>
+                If your program raises an exception it will be the equivalent to
+                returning 0.
 
-                <main b-qt6tgh2907="">
-                    <article class="content px-4" b-qt6tgh2907="">
-                        <!--!--><!--!--><!--!--><!--!-->
+                <h3>Get current cards</h3>
+                <p>
+                    This will put the bots current hand, with the table taken
+                    into account, into a variable called current_bot_hand:
+                </p>
+                <pre>current_bot_hand = obs.get_my_hand_type()</pre>
+                <p>
+                    This will put the boards hand type, with the bots hand
+                    excluded:
+                </p>
+                <pre>current_board_hand = obs.get_board_hand_type()</pre>
+                <p>
+                    Both variables will be of type HandType, which looks like
+                    this:
+                </p>
 
-                        <!--!-->
-                        <h1 b-mw0vf3mx45="" tabindex="-1">Documentation</h1>
-                        <!--!-->
-                        <p b-mw0vf3mx45="">
-                            This is the the stripped down version of the full
-                            documentation that will help you get started with
-                            your first Poker Bot Battle script. If you want the
-                            full overview of the documentation you can follow
-                            this
-                            <a
-                                href="https://poker-game-runner.readthedocs.io/en/latest/poker_game_runner.html"
-                                b-mw0vf3mx45=""
-                                >link</a
-                            >.
-                        </p>
+                <ul>
+                    <li>STRAIGHTFLUSH = 9</li>
+                    <li>FOUROFAKIND = 8</li>
+                    <li>FULLHOUSE = 7</li>
+                    <li>FLUSH = 6</li>
+                    <li>STRAIGHT = 5</li>
+                    <li>THREEOFAKIND = 4</li>
+                    <li>TWOPAIR = 3</li>
+                    <li>PAIR = 2</li>
+                    <li>HIGHCARD = 1</li>
+                    <li>ERROR = 0</li>
+                </ul>
+                If you want to match the current handtype to a specific hand
+                type, you can do it like this:
+                <pre>if current_bot_hand == HandType.STRAIGHTFLUSH:
+    some_action()</pre>
+                <p>
+                    If you want to match the hand type to specific hands, you
+                    can do it like this:
+                </p>
+                <pre>if (["77+", "A8s+", "K9s+", "QTs+", "AJo+", "KQo"].is_hand_in_range(obs.my_hand)):
+    some_action()</pre>
+                <p>
+                    The list above is a list of hands that are generated with
+                    the help of
+                    <a href="https://www.pokerhandrange.com/">this website</a>.
+                    <br />
+                    When you have created the wanted hand range you have two
+                    options to insert it into your script, either:
+                </p>
 
-                        <!--!-->
-                        <h2 b-mw0vf3mx45="">Getting Started</h2>
-                        <!--!-->
-                        <h3 b-mw0vf3mx45="">Basics</h3>
-                        <!--!-->
-                        <p b-mw0vf3mx45="">
-                            The function called 'act' has to return either:
-                        </p>
-                        <ul b-mw0vf3mx45="">
-                            <li b-mw0vf3mx45="">
-                                0 is to fold, or check if no previous bot has
-                                raised
-                            </li>
-                            <li b-mw0vf3mx45="">
-                                1 is to call, or check if no previous bot has
-                                raised
-                            </li>
-                            <li b-mw0vf3mx45="">
-                                &gt;1 is for raising a specific amount
-                            </li>
-                        </ul>
-                        If your program raises an exception it will be the
-                        equivalent to returning 0.
-                        <p></p>
+                <ul>
+                    <li>Manually copy it into your script</li>
+                    <li>Inspect the site to copy paste it into your script</li>
+                </ul>
+                <br />
+                <h3>Get current round</h3>
+                <p>
+                    If you want to base some action on the specific round of the
+                    current game, you can do it like this:
+                </p>
+                <pre>if obs.current_round == 2:
+    some_action()</pre>
+                <p>
+                    The current round is an int and can be interpreted like
+                    this:
+                </p>
 
-                        <!--!-->
-                        <h3 b-mw0vf3mx45="">Get current cards</h3>
-                        <!--!-->
-                        <p b-mw0vf3mx45="">
-                            This will put the bots current hand, with the table
-                            taken into account, into a variable called
-                            current_bot_hand:
-                        </p>
-                        <!--!-->
-                        <pre b-mw0vf3mx45="">
-  current_bot_hand = obs.get_my_hand_type()
-</pre
-                        >
-                        <!--!-->
-                        <p b-mw0vf3mx45="">
-                            This will put the boards hand type, with the bots
-                            hand excluded:
-                        </p>
-                        <!--!-->
-                        <pre b-mw0vf3mx45="">
-  current_board_hand = obs.get_board_hand_type()
-</pre
-                        >
-                        <!--!-->
-                        <p b-mw0vf3mx45="">
-                            Both variables will be of type HandType, which looks
-                            like this:
-                        </p>
-                        <ul b-mw0vf3mx45="">
-                            <li b-mw0vf3mx45="">STRAIGHTFLUSH = 9</li>
-                            <li b-mw0vf3mx45="">FOUROFAKIND = 8</li>
-                            <li b-mw0vf3mx45="">FULLHOUSE = 7</li>
-                            <li b-mw0vf3mx45="">FLUSH = 6</li>
-                            <li b-mw0vf3mx45="">STRAIGHT = 5</li>
-                            <li b-mw0vf3mx45="">THREEOFAKIND = 4</li>
-                            <li b-mw0vf3mx45="">TWOPAIR = 3</li>
-                            <li b-mw0vf3mx45="">PAIR = 2</li>
-                            <li b-mw0vf3mx45="">HIGHCARD = 1</li>
-                            <li b-mw0vf3mx45="">ERROR = 0</li>
-                        </ul>
-                        If you want to match the current handtype to a specific
-                        hand type, you can do it like this:
-                        <p></p>
-                        <!--!-->
-                        <pre b-mw0vf3mx45="">
-  if current_bot_hand == HandType.STRAIGHTFLUSH:
-    some_action()
-</pre
-                        >
-                        <!--!-->
-                        <p b-mw0vf3mx45="">
-                            If you want to match the hand type to specific
-                            hands, you can do it like this:
-                        </p>
-                        <!--!-->
-                        <pre b-mw0vf3mx45="">
-  if (["77+", "A8s+", "K9s+", "QTs+", "AJo+", "KQo"].is_hand_in_range(obs.my_hand)):
-    some_action()
-</pre
-                        >
-                        <!--!-->
-                        <p b-mw0vf3mx45="">
-                            The list above is a list of hands that are generated
-                            with the help of
-                            <a
-                                href="https://www.pokerhandrange.com/"
-                                b-mw0vf3mx45=""
-                                >this website</a
-                            >. <br b-mw0vf3mx45="" />
-                            When you have created the wanted hand range you have
-                            two options to insert it into your script, either:
-                        </p>
-                        <ul b-mw0vf3mx45="">
-                            <li b-mw0vf3mx45="">
-                                Manually copy it into your script
-                            </li>
-                            <li b-mw0vf3mx45="">
-                                Inspect the site to copy paste it into your
-                                script
-                            </li>
-                        </ul>
-                        <br b-mw0vf3mx45="" />
-                        <p></p>
-                        <!--!-->
-                        <h3 b-mw0vf3mx45="">Get current round</h3>
-                        <!--!-->
-                        <p b-mw0vf3mx45="">
-                            If you want to base some action on the specific
-                            round of the current game, you can do it like this:
-                        </p>
-                        <!--!-->
-                        <pre b-mw0vf3mx45="">
-  if obs.current_round == 2:
-    some_action()
-</pre
-                        >
-                        <!--!-->
-                        <p b-mw0vf3mx45="">
-                            The current round is an int and can be interpreted
-                            like this:
-                        </p>
-                        <ul b-mw0vf3mx45="">
-                            <li b-mw0vf3mx45="">
-                                0 = Preflop (no cards on board)
-                            </li>
-                            <li b-mw0vf3mx45="">
-                                1 = Flop (three cards on board)
-                            </li>
-                            <li b-mw0vf3mx45="">
-                                2 = Turn (four cards on board)
-                            </li>
-                            <li b-mw0vf3mx45="">
-                                3 = River (five cards on board)
-                            </li>
-                            <li b-mw0vf3mx45="">
-                                4 = Showdown (last chance to raise)
-                            </li>
-                        </ul>
-                        If you have any questions just ask us at the event.<br
-                            b-mw0vf3mx45=""
-                        />
-                        Good luck with your bot and have fun!
-                        <br b-mw0vf3mx45="" />
-                        <br b-mw0vf3mx45="" />
-                        <p></p>
-                    </article>
-                </main>
-            </div>
-            <!--!-->
-            <!--!-->
-        </div>
-
-        <script>
-            if (window.location.hostname.includes("localhost")) {
-                Blazor.start({
-                    environment: "Development",
-                });
-            } else {
-                Blazor.start({
-                    environment: "Production",
-                });
-            }
-        </script>
+                <ul>
+                    <li>0 = Preflop (no cards on board)</li>
+                    <li>1 = Flop (three cards on board)</li>
+                    <li>2 = Turn (four cards on board)</li>
+                    <li>3 = River (five cards on board)</li>
+                    <li>4 = Showdown (last chance to raise)</li>
+                </ul>
+                If you have any questions just ask us at the event.<br />
+                Good luck with your bot and have fun!
+                <br />
+                <br />
+            </article>
+        </main>
     </body>
 </html>
