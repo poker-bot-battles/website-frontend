@@ -84,3 +84,13 @@ body {
     transform: scale(1.1);
     color: #000;
 }
+.bottom-text {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
