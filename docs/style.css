@@ -61,29 +61,12 @@ li {
     padding: 2px 0;
 }
 
-pre {
-    background-color: rgb(229, 231, 239);
+/* Overrides prism */
+.code-toolbar > pre {
+    background-color: #e0dfdf;
     border-radius: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    display: block;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    overflow: auto;
-    font-size: .875rem;
-    padding-left: 1em;
 }
 
-code, kbd, pre, samp {
-    font-family: var(--code-font);
-    direction: ltr;
-    unicode-bidi: bidi-override;
-}
-
-.tabs {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.token.operator {
+    background: hsl(0deg 0% 100% / 0%);
 }
