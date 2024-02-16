@@ -59,7 +59,11 @@
                     This will put the bots current hand, with the table taken
                     into account, into a variable called current_bot_hand:
                 </p>
-                <pre>current_bot_hand = obs.get_my_hand_type()</pre>
+                <!-- make two tabs one for pytohn and one for java-->
+                <div class="tabs">
+                    <pre>List&ltstring&gt current_bot_hand = obs.getMyHand()</pre>
+                    <pre>current_bot_hand = obs.get_my_hand_type()</pre>
+                </div>
                 <p>
                     This will put the boards hand type, with the bots hand
                     excluded:
