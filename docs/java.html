@@ -41,12 +41,12 @@
                     <a
                         href="https://poker-game-runner.readthedocs.io/en/latest/poker_game_runner.html"
                         >link</a
-                    >.
+                    >. Keep in mind that the full documentation is for Python.
                 </p>
 
                 <h2>Getting Started</h2>
                 <h3>Basics</h3>
-                <p>The function called 'act' has to return either:</p>
+                <p>Your program can print the following options:</p>
                 <ul>
                     <li>
                         0 is to fold, or check if no previous bot has raised
@@ -62,17 +62,14 @@
                 <h3>Get current cards</h3>
                 <p>
                     This will put the bots current hand, with the table taken
-                    into account, into a variable called current_bot_hand:
+                    into account, into a variable called currentBotHand:
                 </p>
-                <!-- make two tabs one for pytohn and one for java-->
-                <div class="tabs">
-                    <pre><code class="language-python">current_bot_hand = obs.get_my_hand_type()</code></pre>
-                </div>
+                <pre><code class="language-java">HandType currentBotHand = obs.getMyHand();</code></pre>
                 <p>
                     This will put the boards hand type, with the bots hand
                     excluded:
                 </p>
-                <pre><code class="language-python">current_board_hand = obs.get_board_hand_type()</code></pre>
+                <pre><code class="language-java">HandType currentBoardHand = obs.getBoardHandType()</code></pre>
                 <p>
                     Both variables will be of type HandType, which looks like
                     this:
@@ -92,14 +89,12 @@
                 </ul>
                 If you want to match the current handtype to a specific hand
                 type, you can do it like this:
-                <pre><code class="language-python">if current_bot_hand == HandType.STRAIGHTFLUSH:
-    some_action()</code></pre>
+                <pre><code class="language-java">if (currentBotHand == HandType.STRAIGHTFLUSH) {someAction();}</code></pre>
                 <p>
                     If you want to match the hand type to specific hands, you
                     can do it like this:
                 </p>
-                <pre><code class="language-python">if (["77+", "A8s+", "K9s+", "QTs+", "AJo+", "KQo"].is_hand_in_range(obs.my_hand)):
-    some_action()</code></pre>
+                <pre><code class="language-java">if (("77+", "A8s+", "K9s+", "QTs+", "AJo+", "KQo").isHandInRange(obs.myHand)) {someAction();}</code></pre>
                 <p>
                     The list above is a list of hands that are generated with
                     the help of
@@ -119,8 +114,7 @@
                     If you want to base some action on the specific round of the
                     current game, you can do it like this:
                 </p>
-                <pre><code class="language-python">if obs.current_round == 2:
-    some_action()</code></pre>
+                <pre><code class="language-java">if (obs.currentRound() == 2) {someAction;}</code></pre>
                 <p>
                     The current round is an int and can be interpreted like
                     this:
