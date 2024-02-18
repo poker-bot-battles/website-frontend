@@ -64,7 +64,7 @@
                     This will put the bots current hand, with the table taken
                     into account, into a variable called currentBotHand:
                 </p>
-                <pre><code class="language-java">HandType currentBotHand = obs.getMyHand();</code></pre>
+                <pre><code class="language-java">HandType currentBotHand = obs.getMyHandType();</code></pre>
                 <p>
                     This will put the boards hand type, with the bots hand
                     excluded:
@@ -114,7 +114,7 @@
                     If you want to base some action on the specific round of the
                     current game, you can do it like this:
                 </p>
-                <pre><code class="language-java">if (obs.currentRound() == 2) {someAction;}</code></pre>
+                <pre><code class="language-java">if (obs.currentRound() == 2) {someAction();}</code></pre>
                 <p>
                     The current round is an int and can be interpreted like
                     this:
