@@ -61,7 +61,7 @@
 
                 <h3>Get current cards</h3>
                 <p>
-                    This will put the bots current hand, with the table taken
+                    This will put the bots current hand type, with the table taken
                     into account, into a variable called currentBotHand:
                 </p>
                 <pre><code class="language-java">HandType currentBotHand = obs.getMyHandType();</code></pre>
@@ -89,12 +89,24 @@
                 </ul>
                 If you want to match the current handtype to a specific hand
                 type, you can do it like this:
-                <pre><code class="language-java">if (currentBotHand == HandType.STRAIGHTFLUSH) {someAction();}</code></pre>
+                <pre><code class="language-java">
+if (currentBotHand == HandType.STRAIGHTFLUSH) {
+    someAction();
+}</code></pre>
                 <p>
-                    If you want to match the hand type to specific hands, you
-                    can do it like this:
+                    Or you can check if the current hand is better than a specific handtype:
                 </p>
-                <pre><code class="language-java">if (("77+", "A8s+", "K9s+", "QTs+", "AJo+", "KQo").isHandInRange(obs.myHand)) {someAction();}</code></pre>
+                <pre><code class="language-java">
+if (currentBotHand.getValue() >= HandType.PAIR.getValue()) {
+    someAction();
+}</code></pre>
+                <p>
+                    If you want to match your hand to a specific range, you can do it like this:
+                </p>
+                <pre><code class="language-java">
+if (new Range("77+, A8s+, K9s+, QTs+, AJo+, KQo")).isHandInRange(obs.myHand) {
+    someAction();
+}</code></pre>
                 <p>
                     The list above is a list of hands that are generated with
                     the help of
@@ -114,7 +126,10 @@
                     If you want to base some action on the specific round of the
                     current game, you can do it like this:
                 </p>
-                <pre><code class="language-java">if (obs.currentRound() == 2) {someAction();}</code></pre>
+                <pre><code class="language-java">
+if (obs.currentRound() == 2) {
+    someAction();
+}</code></pre>
                 <p>
                     The current round is an int and can be interpreted like
                     this:
