@@ -71,7 +71,7 @@
                 </p>
                 <pre><code class="language-java">HandType currentBoardHand = obs.getBoardHandType()</code></pre>
                 <p>
-                    Both variables will be of type HandType, which looks like
+                    Both variables will be of type HandType (enum), which looks like
                     this:
                 </p>
 
@@ -104,7 +104,7 @@ if (currentBotHand.getValue() >= HandType.PAIR.getValue()) {
                     If you want to match your hand to a specific range, you can do it like this:
                 </p>
                 <pre><code class="language-java">
-if (new Range("77+, A8s+, K9s+, QTs+, AJo+, KQo")).isHandInRange(obs.myHand) {
+if (new Range("77+, A8s+, K9s+, QTs+, AJo+, KQo").isHandInRange(obs.getMyHand())) {
     someAction();
 }</code></pre>
                 <p>
@@ -127,7 +127,7 @@ if (new Range("77+, A8s+, K9s+, QTs+, AJo+, KQo")).isHandInRange(obs.myHand) {
                     current game, you can do it like this:
                 </p>
                 <pre><code class="language-java">
-if (obs.currentRound() == 2) {
+if (obs.getCurrentRound() == 2) {
     someAction();
 }</code></pre>
                 <p>

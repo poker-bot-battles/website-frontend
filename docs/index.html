@@ -71,7 +71,7 @@
                 </p>
                 <pre><code class="language-python">current_board_hand = obs.get_board_hand_type()</code></pre>
                 <p>
-                    Both variables will be of type HandType, which looks like
+                    Both variables will be of type HandType (enum), which looks like
                     this:
                 </p>
 
@@ -89,13 +89,21 @@
                 </ul>
                 If you want to match the current handtype to a specific hand
                 type, you can do it like this:
-                <pre><code class="language-python">if current_bot_hand == HandType.STRAIGHTFLUSH:
+                <pre><code class="language-python">
+if current_bot_hand == HandType.STRAIGHTFLUSH:
+    some_action()</code></pre>
+                <p>
+                    Or you can check if the current hand is better than a specific handtype:
+                </p>
+                <pre><code class="language-python">
+if current_bot_hand >= HandType.PAIR:
     some_action()</code></pre>
                 <p>
                     If you want to match the hand type to specific hands, you
                     can do it like this:
                 </p>
-                <pre><code class="language-python">if (["77+", "A8s+", "K9s+", "QTs+", "AJo+", "KQo"].is_hand_in_range(obs.my_hand)):
+                <pre><code class="language-python">
+if (Range("77+, A8s+, K9s+, QTs+, AJo+, KQo").is_hand_in_range(obs.my_hand)):
     some_action()</code></pre>
                 <p>
                     The list above is a list of hands that are generated with
