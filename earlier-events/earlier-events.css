@@ -1,81 +1,96 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .timeline {
-    max-width: 800px;
-    margin: 50px auto;
-    border-left: 2px solid #333;
-    position: relative;
-    margin-left: 300px; /* Adjust this value as needed */
-  }
-  
-  
-  .event {
-    position: relative;
-    padding-left: 50px;
-    margin-bottom: 50px;
-  }
-  
-  .event-content {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-    position: relative;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  
-  .event img {
-    width: 100%;
-    border-radius: 5px;
-    margin-bottom: 10px; 
-    overflow: hidden;
-  }
-  
-  .event h3 {
-    margin-top: 0;
-    font-size: 20px;
-    color: #333;
-  }
-  
-  .event p {
-    margin-bottom: 0;
-    color: #666;
-  }
-  
-  .event:before {
-    content: "";
-    width: 10px;
-    height: 10px;
-    background-color: #333;
-    border-radius: 50%;
-    position: absolute;
-    left: -6px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .event:last-child {
-    margin-bottom: 0;
-  }
-  
-  .event:last-child .event-content {
-    margin-bottom: 0;
-  }
-  
-  .image-container {
-    display: flex;
-  }
-  
-  .image-container img {
-    width: 50%; /* Adjusted width to fit two images side by side */
-    border-radius: 5px;
-    margin-right: 10px; /* Added margin between images */
-  }
-  
-  .image-container img:last-child {
-    margin-right: 0; /* Remove margin from the last image */
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+dl,
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+li {
+  padding: 2px 0;
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 50px auto;
+  border-left: 2px solid #333;
+  position: relative;
+  margin-left: 300px; /* Adjust this value as needed */
+}
+
+.event {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 50px;
+}
+
+.event-content {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.event h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.event p {
+  margin-bottom: 0;
+  color: #666;
+}
+
+.event:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  border-radius: 50%;
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.event:last-child {
+  margin-bottom: 0;
+}
+
+.event:last-child .event-content {
+  margin-bottom: 0;
+}
+
+.image-container {
+  display: flex;
+}
+
+.image-container img {
+  width: 50%; /* Adjusted width to fit two images side by side */
+  border-radius: 5px;
+  margin-right: 10px; /* Added margin between images */
+  object-fit: cover;
+}
+
+.image-container img:last-child {
+  margin-right: 0; /* Remove margin from the last image */
+}
