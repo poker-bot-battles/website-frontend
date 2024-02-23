@@ -122,9 +122,10 @@ body {
     .nav-buttons {
         flex-direction: column;
     }
-    .nav-button {
+    .nav-buttons .nav-button {
         max-width: 600px !important;
     }
+
     .nav-group {
         top: 40%;
     }
