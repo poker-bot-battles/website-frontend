@@ -1,7 +1,7 @@
 const backendUrl = "http://127.0.0.1:5140"
 
 async function loadTables() {
-    const resp = await fetch(backendUrl+"/files/")
+    const resp = await fetch(backendUrl + "/files/")
     const tables = await resp.json()
     const tableContainer = document.getElementById("tables")
     tableContainer.innerHTML = ""
@@ -11,54 +11,49 @@ async function loadTables() {
     }
 }
 
+function makeElement(type, className = "", text = "", onclick = null) {
+    const el = document.createElement(type)
+    el.textContent = text
+    el.className = className
+    if (onclick) el.onclick = onclick
+    return el
+}
+
+function appendChildList(parent, children) {
+    for (const child of children) {
+        parent.appendChild(child)
+    }
+}
+
 function makeTableDiv(table, tableName) {
     // Base elements
-    const tableDiv = document.createElement("div");
-    tableDiv.className = "table"
-    const nameH2 = document.createElement("h2");
-    const filesList = document.createElement("ul");
-    const controls = document.createElement("div");
-    controls.className = "controls"
-    const runButton = document.createElement("Button");
-    runButton.onclick = () => runTable(tableName)
-    runButton.textContent = "Run"
+    const tableDiv = makeElement("div", "table");
+    const nameH2 = makeElement("h2", "", "Table: " + tableName);
+    const controls = makeElement("div", "controls")
+    const runButton = makeElement("button", "", "run", () => runTable(tableName))
     controls.appendChild(runButton)
 
-    nameH2.textContent = "Table: " + tableName
     let resultFileName = "none";
+    const filesList = makeElement("ul");
     // Add players
     for (const filename of table) {
         if (filename.endsWith(".json")) {
             resultFileName = filename;
             continue;
         }
-        let el = document.createElement("li")
-        el.className = "file"
-        let nameEl = document.createElement("p")
-        let deleteBtn = document.createElement("button")
-        deleteBtn.onclick = () => deleteFile(tableName, filename)
-        nameEl.textContent = filename
-        deleteBtn.textContent = "Delete"
-        el.appendChild(nameEl)
-        el.appendChild(deleteBtn)
+        let el = makeElement("li", "file")
+        let nameEl = makeElement("p", "", filename)
+        let deleteBtn = makeElement("button", "", "Delete", () => deleteFile(tableName, filename))
+        appendChildList(el, [nameEl, deleteBtn])
         filesList.appendChild(el)
 
     };
-    // Table results
-    const results = document.createElement("ul");
-    let resultFile = document.createElement("li")
-    resultFile.textContent = "Result File: " + resultFileName
-    let deleteResultBtn = document.createElement("button")
-    deleteResultBtn.onclick = () => deleteFile(tableName, `table-${tableName}.json`)
-    deleteResultBtn.textContent = "Delete Result File"
-    
-    results.appendChild(resultFile)
-    results.appendChild(deleteResultBtn)
+    const results = makeElement("ul");
+    const resultFile = makeElement("li", "", "Result File: " + resultFileName)
+    const deleteResultBtn = makeElement("button", "", "Delete Result File", () => deleteFile(tableName, `table-${tableName}.json`))
 
-    tableDiv.appendChild(nameH2)
-    tableDiv.appendChild(controls)
-    tableDiv.appendChild(filesList)
-    tableDiv.appendChild(results)
+    appendChildList(results, [resultFile, deleteResultBtn])
+    appendChildList(tableDiv, [nameH2, controls, filesList, results])
     return tableDiv;
 }
 
@@ -76,7 +71,7 @@ async function setTime() {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({time: time}),
+        body: JSON.stringify({ time: time }),
     })
     document.getElementById("timeInputField").value = ""
     getTime()
@@ -84,7 +79,7 @@ async function setTime() {
 
 async function getTime() {
     const timeField = document.getElementById("currentTime")
-    
+
     const resp = await fetch(`${backendUrl}/get-time`)
     const time = await resp.text()
     timeField.textContent = "Time: " + time
