@@ -1,7 +1,13 @@
-const backendUrl = "http://127.0.0.1:5140"
+const backendUrl = "https://api.pokerbot.dk"
+const apiKey = localStorage.getItem("api-key");
 
 async function loadTables() {
-    const resp = await fetch(backendUrl + "/files/")
+    const resp = await fetch(backendUrl + "/files", {
+        method: "GET",
+        headers: {
+            "X-API-KEY": apiKey
+        }
+    })
     const tables = await resp.json()
     const tableContainer = document.getElementById("tables")
     tableContainer.innerHTML = ""
@@ -60,6 +66,9 @@ function makeTableDiv(table, tableName) {
 async function deleteFile(tableName, fileName) {
     await fetch(`${backendUrl}/delete/${tableName}/${fileName}`, {
         method: "Delete",
+        headers: {
+            "X-API-KEY": apiKey
+        }
     })
     loadTables()
 }
@@ -70,6 +79,7 @@ async function setTime() {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
+            "X-API-KEY": apiKey
         },
         body: JSON.stringify({ time: time }),
     })
@@ -88,6 +98,9 @@ async function getTime() {
 async function runTable(tableName) {
     await fetch(`${backendUrl}/run/${tableName}`, {
         method: "GET",
+        headers: {
+            "X-API-KEY": apiKey
+        }
     })
     loadTables()
 }
