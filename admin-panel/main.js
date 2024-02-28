@@ -15,8 +15,8 @@ async function loadTables() {
         errorContainer.textContent = await resp.text()
     }
     const tables = await resp.json()
-    tableContainer.innerHTML = ""
     const tableContainer = document.getElementById("tables")
+    tableContainer.innerHTML = ""
     for (const tableName in tables) {
         const tableDiv = makeTableDiv(tables[tableName], tableName);
         tableContainer.appendChild(tableDiv)
