@@ -81,7 +81,7 @@ async function deleteFile(tableName, fileName) {
 
 async function setTime() {
     const time = document.getElementById("timeInputField").value
-    await fetch(`${backendUrl}/set-time/`, {
+    await fetch(`${backendUrl}/set-time`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
