@@ -8,9 +8,15 @@ async function loadTables() {
             "X-API-KEY": apiKey
         }
     })
+    const errorContainer = document.getElementById("errorMessage")
+    errorContainer.innerHTML = ""
+    
+    if (resp.status != 200) {
+        errorContainer.textContent = await resp.text()
+    }
     const tables = await resp.json()
-    const tableContainer = document.getElementById("tables")
     tableContainer.innerHTML = ""
+    const tableContainer = document.getElementById("tables")
     for (const tableName in tables) {
         const tableDiv = makeTableDiv(tables[tableName], tableName);
         tableContainer.appendChild(tableDiv)
