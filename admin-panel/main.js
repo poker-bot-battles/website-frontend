@@ -87,7 +87,7 @@ async function setTime() {
             'Content-Type': 'application/json',
             "X-API-KEY": apiKey
         },
-        body: JSON.stringify({ time: time }),
+        body: time,
     })
     document.getElementById("timeInputField").value = ""
     getTime()
