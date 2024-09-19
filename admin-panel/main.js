@@ -81,13 +81,12 @@ async function deleteFile(tableName, fileName) {
 
 async function setTime() {
     const time = document.getElementById("timeInputField").value
-    await fetch(`${backendUrl}/set-time`, {
+    await fetch(`${backendUrl}/set-time?time=${time}`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
             "X-API-KEY": apiKey
         },
-        body: JSON.stringify({ time: time }),
     })
     document.getElementById("timeInputField").value = ""
     getTime()

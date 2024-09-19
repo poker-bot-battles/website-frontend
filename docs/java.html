@@ -1,157 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Documentation | Poker Bot Battles x Netcompany</title>
-        <link href="./prism.css" rel="stylesheet" />
-        <style>
-            @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-        </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation | Poker Bot Battles x Netcompany</title>
+    <link href="./prism.css" rel="stylesheet" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+    </style>
 
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="../sidebar.css" />
-        <link rel="stylesheet" href="../style.css" />
-    </head>
-    <body>
-        <nav class="sidebar">
-            <ul>
-                <li class="main"><a href="/"><img src="/images/logo-clean.png" alt="pbb" style="width: 70%;"></a></li>
-                <li class="nav"><a href="/docs/">Documentation</a></li>
-                <li class="nav">
-                    <a href="https://replit.com/@Hetling/ITU-poker-bot-battle"
-                        >Code here!</a
-                    >
-                </li>
-                <li class="nav"><a href="/submit">Submit file</a></li>
-            </ul>
-            <ul>
-                <li class="nav end"><a href="/earlier-events">Earlier events</a></li>
-              </ul>
-        </nav>
-        <main>
-            <article>
-                <h1>Java Documentation</h1>
-                <br/>
-                <a class="nav-button docs" href="./index.html">For Python documentation</a>
-                <br/>
-                <br/>
-                <p>
-                    This is the the stripped down version of the full
-                    documentation that will help you get started with your first
-                    Poker Bot Battle script. If you want the full overview of
-                    the documentation you can follow this
-                    <a
-                        href="https://poker-game-runner.readthedocs.io/en/latest/poker_game_runner.html"
-                        >link</a
-                    >. Keep in mind that the full documentation is for Python.
-                </p>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../sidebar.css" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <nav class="sidebar">
+      <ul>
+        <li class="main">
+          <a href="/"
+            ><img src="/images/logo-clean.png" alt="pbb" style="width: 70%"
+          /></a>
+        </li>
+        <li class="nav"><a href="/docs/">Documentation</a></li>
+        <li class="nav">
+          <a
+            href="https://scribehow.com/shared/Creating_you_poker_bot__HN2MWL3VT5G02KPTCfdvYg"
+            target="_blank"
+            >Code here!</a
+          >
+        </li>
+        <li class="nav"><a href="/submit">Submit file</a></li>
+      </ul>
+      <ul>
+        <li class="nav end"><a href="/earlier-events">Earlier events</a></li>
+      </ul>
+    </nav>
+    <main>
+      <article>
+        <h1>Java Documentation</h1>
+        <br />
+        <a class="nav-button docs" href="./index.html"
+          >For Python documentation</a
+        >
+        <br />
+        <br />
+        <p>
+          This is the the stripped down version of the full documentation that
+          will help you get started with your first Poker Bot Battle script. If
+          you want the full overview of the documentation you can follow this
+          <a
+            href="https://poker-game-runner.readthedocs.io/en/latest/poker_game_runner.html"
+            >link</a
+          >. Keep in mind that the full documentation is for Python.
+        </p>
 
-                <h2>Getting Started</h2>
-                <h3>Basics</h3>
-                <p>Your program can print the following options:</p>
-                <ul>
-                    <li>
-                        0 is to fold, or check if no previous bot has raised
-                    </li>
-                    <li>
-                        1 is to call, or check if no previous bot has raised
-                    </li>
-                    <li>&gt;1 is for raising a specific amount</li>
-                </ul>
-                If your program raises an exception it will be the equivalent to
-                returning 0.
+        <h2>Getting Started</h2>
+        <h3>Basics</h3>
+        <p>Your program can return the following options:</p>
+        <ul>
+          <li>0 is to fold, or check if no previous bot has raised</li>
+          <li>1 is to call, or check if no previous bot has raised</li>
+          <li>&gt;1 is for raising a specific amount</li>
+        </ul>
+        If your program raises an exception it will be the equivalent to
+        returning 0.
 
-                <h3>Get current cards</h3>
-                <p>
-                    This will put the bots current hand type, with the table taken
-                    into account, into a variable called currentBotHand:
-                </p>
-                <pre><code class="language-java">HandType currentBotHand = obs.getMyHandType();</code></pre>
-                <p>
-                    This will put the boards hand type, with the bots hand
-                    excluded:
-                </p>
-                <pre><code class="language-java">HandType currentBoardHand = obs.getBoardHandType()</code></pre>
-                <p>
-                    Both variables will be of type HandType (enum), which looks like
-                    this:
-                </p>
+        <h3>Get current cards</h3>
+        <p>
+          This will put the bots current hand type, with the table taken into
+          account, into a variable called currentBotHand:
+        </p>
+        <pre><code class="language-java">HandType currentBotHand = obs.getMyHandType();</code></pre>
+        <p>This will put the boards hand type, with the bots hand excluded:</p>
+        <pre><code class="language-java">HandType currentBoardHand = obs.getBoardHandType()</code></pre>
+        <p>
+          Both variables will be of type HandType (enum), which looks like this:
+        </p>
 
-                <ul>
-                    <li>STRAIGHTFLUSH = 9</li>
-                    <li>FOUROFAKIND = 8</li>
-                    <li>FULLHOUSE = 7</li>
-                    <li>FLUSH = 6</li>
-                    <li>STRAIGHT = 5</li>
-                    <li>THREEOFAKIND = 4</li>
-                    <li>TWOPAIR = 3</li>
-                    <li>PAIR = 2</li>
-                    <li>HIGHCARD = 1</li>
-                    <li>ERROR = 0</li>
-                </ul>
-                If you want to match the current handtype to a specific hand
-                type, you can do it like this:
-                <pre><code class="language-java">
+        <ul>
+          <li>STRAIGHTFLUSH = 9</li>
+          <li>FOUROFAKIND = 8</li>
+          <li>FULLHOUSE = 7</li>
+          <li>FLUSH = 6</li>
+          <li>STRAIGHT = 5</li>
+          <li>THREEOFAKIND = 4</li>
+          <li>TWOPAIR = 3</li>
+          <li>PAIR = 2</li>
+          <li>HIGHCARD = 1</li>
+          <li>ERROR = 0</li>
+        </ul>
+        If you want to match the current handtype to a specific hand type, you
+        can do it like this:
+        <pre><code class="language-java">
 if (currentBotHand == HandType.STRAIGHTFLUSH) {
     someAction();
 }</code></pre>
-                <p>
-                    Or you can check if the current hand is better than a specific handtype:
-                </p>
-                <pre><code class="language-java">
+        <p>
+          Or you can check if the current hand is better than a specific
+          handtype:
+        </p>
+        <pre><code class="language-java">
 if (currentBotHand.getValue() >= HandType.PAIR.getValue()) {
     someAction();
 }</code></pre>
-                <p>
-                    If you want to match your hand to a specific range, you can do it like this:
-                </p>
-                <pre><code class="language-java">
+        <p>
+          If you want to match your hand to a specific range, you can do it like
+          this:
+        </p>
+        <pre><code class="language-java">
 if (new Range("77+, A8s+, K9s+, QTs+, AJo+, KQo").isHandInRange(obs.getMyHand())) {
     someAction();
 }</code></pre>
-                <p>
-                    The list above is a list of hands that are generated with the help of the site below:
-                </p>
-                <div style="width: 700px;height: 650px;position: relative;overflow: hidden;">
-                    <iframe scrolling="no" src="https://openpokertools.com/" title="Hand range" style="position : absolute; top: -125px; left: -2px; width: 100%; height: 200vh;"></iframe>
-                </div>
-                <p>
-                    When you have created the wanted hand range you can copy the range string into your script.
-                </p>
+        <p>
+          The list above is a list of hands that are generated with the help of
+          the site below:
+        </p>
+        <div
+          style="
+            width: 700px;
+            height: 650px;
+            position: relative;
+            overflow: hidden;
+          "
+        >
+          <iframe
+            scrolling="no"
+            src="https://openpokertools.com/"
+            title="Hand range"
+            style="
+              position: absolute;
+              top: -125px;
+              left: -2px;
+              width: 100%;
+              height: 200vh;
+            "
+          ></iframe>
+        </div>
+        <p>
+          When you have created the wanted hand range you can copy the range
+          string into your script.
+        </p>
 
-                <ul>
-                    <li>Manually copy it into your script</li>
-                    <li>Inspect the site to copy paste it into your script</li>
-                </ul>
-                <br />
-                <h3>Get current round</h3>
-                <p>
-                    If you want to base some action on the specific round of the
-                    current game, you can do it like this:
-                </p>
-                <pre><code class="language-java">
+        <ul>
+          <li>Manually copy it into your script</li>
+          <li>Inspect the site to copy paste it into your script</li>
+        </ul>
+        <br />
+        <h3>Get current round</h3>
+        <p>
+          If you want to base some action on the specific round of the current
+          game, you can do it like this:
+        </p>
+        <pre><code class="language-java">
 if (obs.getCurrentRound() == 2) {
     someAction();
 }</code></pre>
-                <p>
-                    The current round is an int and can be interpreted like
-                    this:
-                </p>
+        <p>The current round is an int and can be interpreted like this:</p>
 
-                <ul>
-                    <li>0 = Preflop (no cards on board)</li>
-                    <li>1 = Flop (three cards on board)</li>
-                    <li>2 = Turn (four cards on board)</li>
-                    <li>3 = River (five cards on board)</li>
-                    <li>4 = Showdown (last chance to raise)</li>
-                </ul>
-                If you have any questions just ask us at the event.<br />
-                Good luck with your bot and have fun!
-                <br />
-                <br />
-            </article>
-        </main>
-        <script src="./prism.js"></script>
-    </body>
+        <ul>
+          <li>0 = Preflop (no cards on board)</li>
+          <li>1 = Flop (three cards on board)</li>
+          <li>2 = Turn (four cards on board)</li>
+          <li>3 = River (five cards on board)</li>
+          <li>4 = Showdown (last chance to raise)</li>
+        </ul>
+        <h2>Testing your bot</h2>
+        <iframe
+          src="https://scribehow.com/embed/Testing_and_benchmarking_your_pokerbot__yFAccnLLTymMt-vNEWvi2A?as=scrollable&skipIntro=true"
+          width="640"
+          height="640"
+          allowfullscreen
+          frameborder="0"
+        ></iframe>
+        <br />
+        If you have any questions just ask us at the event.<br />
+        Good luck with your bot and have fun!
+        <br />
+        <br />
+      </article>
+    </main>
+    <script src="./prism.js"></script>
+  </body>
 </html>
