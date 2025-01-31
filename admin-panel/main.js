@@ -100,8 +100,8 @@ async function getTime() {
     timeField.textContent = "Time: " + time
 }
 
-async function runTable(tableName) {
-    await fetch(`${backendUrl}/run/${tableName}`, {
+async function runTable(tableName, numberOfWinners = 1) {
+    await fetch(`${backendUrl}/run/${tableName}/${numberOfWinners}`, {
         method: "GET",
         headers: {
             "X-API-KEY": apiKey
