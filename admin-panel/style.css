@@ -10,6 +10,7 @@ button {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    border-radius: 5px;
 /* 
 when hoverred */
     transition: all 0.1s;
@@ -19,6 +20,7 @@ button:hover {
     background-color: #68a4e4; /* Green */
     color: black;
     transform: scale(1.05);
+    border-radius: 10px;
 }
 /*  clicked */
 button:active {
@@ -76,6 +78,14 @@ tr:nth-child(even) {
     flex-flow: wrap;
 }
 
+.headerBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0rem;
+}
+
 .table {
     display: flex;
     flex-direction: column;
@@ -91,10 +101,28 @@ tr:nth-child(even) {
     margin-bottom: 0.5rem;
 }
 
+.table .headerBox h2{
+    margin-bottom: 0rem;
+    margin-top: 0rem;
+}
+
+
+.filesList{
+    flex: 1;
+}
+
+.resultSelection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .file {
     display: flex;
     justify-content: space-between;
-    
+    margin: 0.5rem 0;
+    align-items: center;
 }
 
 .file p {
@@ -111,4 +139,10 @@ tr:nth-child(even) {
     min-width: 70px;
     padding: 0.7rem;
     margin-bottom: 1rem;
+}
+
+.file .buttonDiv {
+    display: flex;
+    gap: 1rem;
+    
 }
