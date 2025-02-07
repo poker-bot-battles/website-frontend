@@ -101,17 +101,37 @@ body {
     color: #000;
 }
 .bottom-text {
-    margin-top: 50px;
+    margin-top: 25px;
     font-size: 2rem;
     color: white;
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
 .countdown {
-    margin-top: 50px;
+    margin-top: 10px;
     font-size: 1.5rem;
     color: white;
     text-align: center;
+}
+
+.signup-link {
+    font-size: x-large;
+    color: orange;
+    border-style: solid;
+    border-color: orange;
+    border-radius: 3px;
+    border-width: 2px;
+    padding: 2px;
+    font-weight: 500;
+}
+
+.signup-link:hover {
+    color: white;
+    border-color: white;
+}
+
+.signup-div{
+    margin-top: 10px;
 }
 
 @media (max-width: 672px) {
