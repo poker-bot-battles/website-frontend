@@ -70,6 +70,8 @@ function makeTableDiv(table, tableName) {
 }
 
 async function deleteFile(tableName, fileName) {
+    var confirmDelete = confirm(`Are you sure you want to delete ${fileName} from ${tableName}?`)
+    if (!confirmDelete) return
     await fetch(`${backendUrl}/delete/${tableName}/${fileName}`, {
         method: "Delete",
         headers: {
