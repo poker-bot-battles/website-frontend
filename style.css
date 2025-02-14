@@ -114,26 +114,6 @@ body {
     text-align: center;
 }
 
-.signup-link {
-    font-size: x-large;
-    color: orange;
-    border-style: solid;
-    border-color: orange;
-    border-radius: 3px;
-    border-width: 2px;
-    padding: 2px;
-    font-weight: 500;
-}
-
-.signup-link:hover {
-    color: white;
-    border-color: white;
-}
-
-.signup-div{
-    margin-top: 10px;
-}
-
 @media (max-width: 672px) {
     .logo {
         width: calc(100vw - 10rem);
