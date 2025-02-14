@@ -41,12 +41,14 @@ function makeTableDiv(table, tableName) {
     // Base elements
     const tableDiv = makeElement("div", "table");
     const nameH2 = makeElement("h2", "", "Table: " + tableName);
-    const controls = makeElement("div", "controls")
-    const runButton = makeElement("button", "", "run", () => runTable(tableName))
-    controls.appendChild(runButton)
+    const headerBox = makeElement("div", "headerBox")
+    const runButton = makeElement("button", "", "Run", () => runTable(tableName))
+    headerBox.appendChild(nameH2)
+    headerBox.appendChild(runButton)
+
 
     let resultFileName = "none";
-    const filesList = makeElement("ul");
+    const filesList = makeElement("ul", "filesList");
     // Add players
     for (const filename of table) {
         if (filename.endsWith(".json")) {
@@ -55,18 +57,45 @@ function makeTableDiv(table, tableName) {
         }
         let el = makeElement("li", "file")
         let nameEl = makeElement("p", "", filename)
+        let buttonDiv = makeElement("div", "buttonDiv")
+        let moveBtn = makeElement("button", "", "Move", () => popup(tableName, filename))
         let deleteBtn = makeElement("button", "", "Delete", () => deleteFile(tableName, filename))
-        appendChildList(el, [nameEl, deleteBtn])
+        appendChildList(buttonDiv, [moveBtn, deleteBtn])
+        appendChildList(el, [nameEl, buttonDiv])
         filesList.appendChild(el)
 
     };
-    const results = makeElement("ul");
+    const results = makeElement("ul", "resultSelection");
     const resultFile = makeElement("li", "", "Result File: " + resultFileName)
     const deleteResultBtn = makeElement("button", "", "Delete Result File", () => deleteFile(tableName, `table-${tableName}.json`))
 
     appendChildList(results, [resultFile, deleteResultBtn])
-    appendChildList(tableDiv, [nameH2, controls, filesList, results])
+    appendChildList(tableDiv, [headerBox, filesList, results])
     return tableDiv;
+}
+
+// Popup that asks for table number to move file to another table
+function popup(fromTable, fileName) {
+    let toTable = prompt("Please enter table number", "###").toLowerCase()
+    if (toTable != null && isNumber(toTable)) {
+        moveFile(fromTable, toTable, fileName)
+    } else {
+        alert("Invalid table number not a number")
+    }
+}
+
+function isNumber(n) {
+    return !isNaN(parseInt(n)) && !isNaN(n - 0)
+}
+
+async function moveFile(fromTable, toTable, fileName) {
+    await fetch(`${backendUrl}/move/${fromTable}/${fileName}/${toTable}`, {
+        method: "PUT",
+        headers: {
+            "X-API-KEY": apiKey
+        }
+    })
+    loadTables()
 }
 
 async function deleteFile(tableName, fileName) {
