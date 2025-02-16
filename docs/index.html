@@ -199,7 +199,7 @@ if (Range("77+, A8s+, K9s+, QTs+, AJo+, KQo").is_hand_in_range(obs.my_hand)):
       <br />
       <h2>Full Documentation (Only in python)</h2>
       <hr>
-      <div class="section">
+      <div class="section" id="state-observation">
         <h2>Class: <code>poker_game_runner.state.Observation</code></h2>
         <p>A class representing the state of the game.</p>
         <h3>Attributes:</h3>
@@ -210,24 +210,24 @@ if (Range("77+, A8s+, K9s+, QTs+, AJo+, KQo").is_hand_in_range(obs.my_hand)):
           <li><strong>my_index</strong> (<code>int</code>): The index of the current player out of all players in the
             game.</li>
           <li><strong>board_cards</strong> (<code>Tuple[str]</code>): The community cards on the board.</li>
-          <li><strong>player_infos</strong> (<code>Tuple[PlayerInfo]</code>): Current state of all players.</li>
-          <li><strong>history</strong> (<code>Tuple[Tuple[ActionInfo]]</code>): The history of all actions taken so far
+          <li><strong>player_infos</strong> (<code>Tuple[<a href="#state-playerinfo">PlayerInfo</a>]</code>): Current state of all players.</li>
+          <li><strong>history</strong> (<code>Tuple[Tuple[<a href="#state-actioninfo">ActionInfo</a>]]</code>): The history of all actions taken so far
             grouped by game round.</li>
           <li><strong>current_round</strong> (<code>int</code>): The current game round.</li>
           <li><strong>legal_actions</strong> (<code>Tuple[int]</code>): All legal actions.</li>
         </ul>
         <h3>Methods:</h3>
         <ul>
-          <li><code>get_my_player_info()</code> → <code>PlayerInfo</code>: Returns the PlayerInfo of the current player.
+          <li><code>get_my_player_info()</code> → <code><a href="#state-playerinfo">PlayerInfo</a></code>: Returns the PlayerInfo of the current player.
           </li>
-          <li><code>get_my_hand_type()</code> → <code>HandType</code>: Returns the hand type of the current player.</li>
-          <li><code>get_board_hand_type()</code> → <code>HandType</code>: Returns the hand type of the board cards.</li>
+          <li><code>get_my_hand_type()</code> → <code><a href="#state-handtype">HandType</a></code>: Returns the hand type of the current player.</li>
+          <li><code>get_board_hand_type()</code> → <code><a href="#state-handtype">HandType</a></code>: Returns the hand type of the board cards.</li>
           <li><code>get_player_count()</code> → <code>int</code>: Returns the number of players in the tournament.</li>
-          <li><code>get_active_players()</code> → <code>Tuple[PlayerInfo]</code>: the number of players that are active
+          <li><code>get_active_players()</code> → <code>Tuple[<a href="#state-playerinfo">PlayerInfo</a>]</code>: the number of players that are active
             in the hand (have not folded).</li>
-          <li><code>get_actions_this_round()</code> → <code>Tuple[ActionInfo]</code>: Returns the ActionInfo’s from the
+          <li><code>get_actions_this_round()</code> → <code>Tuple[<a href="#state-actioninfo">ActionInfo</a>]</code>: Returns the ActionInfo’s from the
             current round.</li>
-          <li><code>get_actions_in_round(round_num: int)</code> → <code>Tuple[ActionInfo]</code>: Returns the
+          <li><code>get_actions_in_round(round_num: int)</code> → <code>Tuple[<a href="#state-actioninfo">ActionInfo</a>]</code>: Returns the
             ActionInfo’s from the given round.
             Parameters: round_num (int) – the round to fetch actions from (0,1,2 or 3)
           </li>
@@ -246,7 +246,7 @@ if (Range("77+, A8s+, K9s+, QTs+, AJo+, KQo").is_hand_in_range(obs.my_hand)):
         </ul>
       </div>
 
-      <div class="section">
+      <div class="section" id="state-playerinfo">
         <h2>Class: <code>poker_game_runner.state.PlayerInfo</code></h2>
         <p>A class to represent the state of a player.</p>
         <ul>
@@ -256,7 +256,7 @@ if (Range("77+, A8s+, K9s+, QTs+, AJo+, KQo").is_hand_in_range(obs.my_hand)):
         </ul>
       </div>
 
-      <div class="section">
+      <div class="section" id="state-actioninfo">
         <h2>Class: <code>poker_game_runner.state.ActionInfo</code></h2>
         <p>A class to represent a player's action.</p>
         <ul>
@@ -265,7 +265,7 @@ if (Range("77+, A8s+, K9s+, QTs+, AJo+, KQo").is_hand_in_range(obs.my_hand)):
         </ul>
       </div>
 
-      <div class="section">
+      <div class="section" id="state-handtype">
         <h2>Enum: <code>poker_game_runner.state.HandType</code></h2>
         <p>Enumeration of poker hand types.</p>
         <ul>
@@ -282,7 +282,7 @@ if (Range("77+, A8s+, K9s+, QTs+, AJo+, KQo").is_hand_in_range(obs.my_hand)):
         </ul>
       </div>
 
-      <div class="section">
+      <div class="section" id="utils-range">
         <h2>Class: <code>poker_game_runner.utils.Range</code></h2>
         <p>A class representing a range of hands.</p>
         <ul>
