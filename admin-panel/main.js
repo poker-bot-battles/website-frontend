@@ -132,7 +132,8 @@ async function getTime() {
 }
 
 async function runTable(tableName, numberOfWinners = 1) {
-    await fetch(`${backendUrl}/run/${tableName}/${numberOfWinners}`, {
+    const winnersPrTable = document.getElementById('winnersInputField').value || numberOfWinners
+    await fetch(`${backendUrl}/run/${tableName}/${winnersPrTable}`, {
         method: "GET",
         headers: {
             "X-API-KEY": apiKey
