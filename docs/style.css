@@ -21,10 +21,6 @@ article {
     --code-font: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
 
-article span {
-    text-transform: capitalize;
-}
-
 h1 {
     font-size: 2.5rem;
     font-weight: 400;
