@@ -3,6 +3,7 @@ import cat2 from "../../assets/cat2.png";
 import cat3 from "../../assets/cat3.png";
 import cat4 from "../../assets/cat4.png";
 import cat5 from "../../assets/cat5.png";
+import cat6 from "../../assets/cat6.png";
 
 export default function AboutUs() {
   return (
@@ -18,7 +19,16 @@ export default function AboutUs() {
               <p className="font-display-alternative text-2xl m-0">
                 Gergely Takács
               </p>
-              <p>Role at Pokerbot</p>
+              <p>Chair</p>
+            </div>
+          </div>
+          <div className="flex-down gap-4 w-3xs">
+            <img src={cat6} className="rounded-2xl aspect-square" />
+            <div className="flex-down">
+              <p className="font-display-alternative text-2xl m-0">
+                Luca Costa Martins
+              </p>
+              <p>Vice-Chair</p>
             </div>
           </div>
           <div className="flex-down gap-4 w-3xs">
@@ -27,7 +37,7 @@ export default function AboutUs() {
               <p className="font-display-alternative text-2xl m-0">
                 Andreas Nygaard Schiøtt
               </p>
-              <p>Role at Pokerbot</p>
+              <p>Treasurer</p>
             </div>
           </div>
           <div className="flex-down gap-4 w-3xs">
@@ -36,7 +46,7 @@ export default function AboutUs() {
               <p className="font-display-alternative text-2xl m-0">
                 August Bugge
               </p>
-              <p>Role at Pokerbot</p>
+              <p>Marketing</p>
             </div>
           </div>
           <div className="flex-down gap-4 w-3xs">
@@ -45,7 +55,7 @@ export default function AboutUs() {
               <p className="font-display-alternative text-2xl m-0">
                 Laura Benthin Hansen
               </p>
-              <p>Role at Pokerbot</p>
+              <p>Head of funding</p>
             </div>
           </div>
           <div className="flex-down gap-4 w-3xs">
@@ -54,7 +64,7 @@ export default function AboutUs() {
               <p className="font-display-alternative text-2xl m-0">
                 Tobias Mondrup Holm
               </p>
-              <p>Role at Pokerbot</p>
+              <p>Development lead</p>
             </div>
           </div>
         </div>
