@@ -7,8 +7,9 @@ import Header from "./components/Header";
 
 export default function Layout() {
   const [currentTheme, setCurrentTheme] = useState(
-    localStorage.getItem("theme") == "dark" ||
-      window.matchMedia("(prefers-color-scheme: dark)").matches,
+    localStorage.getItem("theme")
+      ? localStorage.getItem("theme") == "dark"
+      : true,
   );
 
   useEffect(() => {
