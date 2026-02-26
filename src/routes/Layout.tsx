@@ -65,9 +65,6 @@ export default function Layout() {
           <Link className="link" to="/submit">
             Submit Code
           </Link>
-          <Link className="link" to="/admin-panel">
-            Admin Panel
-          </Link>
         </div>
       </footer>
     </div>
