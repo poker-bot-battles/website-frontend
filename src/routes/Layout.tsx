@@ -36,7 +36,7 @@ export default function Layout() {
       <footer className="flex p-8 bg-base-200">
         <div className="flex-1">
           <h3>Contact</h3>
-          <p className="text-base">pokerbot@itu.dk</p>
+          <p className="text-base">gtak@itu.dk</p>
           <h3>Projects</h3>
           <p className="text-base">
             <a
