@@ -74,9 +74,8 @@ export default function Cards() {
           server.
         </p>
         <p>
-          Languages include ones you&#0027;ve (probably) already encountered. We
-          offer documentation in both Python and Java for the lowest barrier to
-          entry
+          The best of the bots win prices such as your own cards, pokerset. And
+          if you’re not in the top there’s still opportunity to get free beer.
         </p>
         <div className="flex flex-1 items-end justify-center py-8">
           <Link to={"/sign-up"} className="btn btn-lg">
