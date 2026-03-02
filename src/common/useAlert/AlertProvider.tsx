@@ -1,10 +1,12 @@
-import { useState } from "react";
-import { alertContext, type AlertData } from "./Alert";
+import { useState, type JSX } from "react";
+import { alertContext, type AlertData } from "./AlertContext";
 import { v4 } from "uuid";
+import { AlertPopup } from "./AlertPopup";
 
 export default function AlertProvider(props: { children: React.ReactNode }) {
-  const [alerts, setAlerts] = useState<Record<string, AlertData>>({});
-  const DEFAULT_EXPIRATION_MS = 100000;
+  const [alerts, setAlerts] = useState<Record<string, JSX.Element | undefined>>(
+    {},
+  );
 
   const useAlertFunction = (
     type: AlertData["type"],
@@ -12,28 +14,29 @@ export default function AlertProvider(props: { children: React.ReactNode }) {
   ) => {
     const uuid = v4();
 
-    setTimeout(() => {
-      setAlerts(Object.assign({}, alerts, { [uuid]: undefined }));
-    }, DEFAULT_EXPIRATION_MS);
+    const element = (
+      <AlertPopup
+        type={type}
+        message={message}
+        onTimerExpire={() =>
+          setAlerts(Object.assign({}, alerts, { [uuid]: undefined }))
+        }
+      />
+    );
 
     setAlerts(
-      Object.assign({}, alerts, { [uuid]: { type: type, message: message } }),
+      Object.assign({}, alerts, {
+        [uuid]: element,
+      }),
     );
   };
 
-  const renderAlertElements = () =>
-    Object.keys(alerts).map((alertKey) => (
-      <div
-        className={`bg-${alerts[alertKey].type} flex justify-center items-center`}
-      >
-        <p>{alerts[alertKey].message}</p>
-      </div>
-    ));
+  const renderAlertElements = () => Object.values(alerts);
 
   return (
     <alertContext.Provider value={useAlertFunction}>
       {props.children}
-      <div className="absolute w-screen h-screen left-0 top-0 pointer-events-none p-16">
+      <div className="absolute w-screen h-screen left-0 top-0 pointer-events-none p-16 flex-down justify-end items-center gap-2">
         {renderAlertElements()}
       </div>
     </alertContext.Provider>
