@@ -75,7 +75,7 @@
 
 @font-face {
   font-family: BDO Grotesk;
-  src: url("./assets/BDOGrotesk-VF.ttf") format("truetype");
+  src: url("./assets/fonts/BDOGrotesk-VF.ttf") format("truetype");
 }
 
 @theme {

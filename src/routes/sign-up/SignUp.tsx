@@ -1,7 +1,7 @@
 import { useCallback, useContext, useEffect, useState } from "react";
-import { addApplicant } from "../../firebase/firestore";
-import { alertContext } from "../../common/useAlert/AlertContext";
-import backgroundImage from "../../assets/IMG_2584 1.png";
+import { addApplicant } from "@/firebase/firestore";
+import { alertContext } from "@common/useAlert/AlertContext";
+import backgroundImage from "@images/IMG_2584 1.png";
 
 // Empty for now but could be our own webpage sometime
 export default function SignUp() {

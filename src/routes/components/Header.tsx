@@ -1,6 +1,6 @@
 import { Link } from "react-router";
-import LightModeIcon from "../../assets/lightMode.svg?react";
-import NightModeIcon from "../../assets/nightMode.svg?react";
+import LightModeIcon from "@icons/lightMode.svg?react";
+import NightModeIcon from "@icons/nightMode.svg?react";
 
 export default function Header(props: {
   currentTheme: boolean;

@@ -1,6 +1,6 @@
-import communityImage from "../../assets/community.jpg";
-import community2Image from "../../assets/community2.jpg";
-import freeImage from "../../assets/free.png";
+import communityImage from "@images/community.jpg";
+import community2Image from "@images/community2.jpg";
+import freeImage from "@images/free.png";
 
 export default function PointOfSale() {
   return (

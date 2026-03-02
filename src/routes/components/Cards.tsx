@@ -1,6 +1,6 @@
-import CodeIcon from "../../assets/codeIcon.svg?react";
-import PokerIcon from "../../assets/pokerIcon.svg?react";
-import BeerIcon from "../../assets/beerIcon.svg?react";
+import CodeIcon from "@icons/codeIcon.svg?react";
+import PokerIcon from "@icons/pokerIcon.svg?react";
+import BeerIcon from "@icons/beerIcon.svg?react";
 import { Link } from "react-router";
 
 export default function Cards() {
