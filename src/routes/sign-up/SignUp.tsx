@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 import { addApplicant } from "../../firebase/firestore";
 import { alertContext } from "../../common/useAlert/Alert";
 import backgroundImage from "../../assets/IMG_2584 1.png";
@@ -6,10 +6,11 @@ import backgroundImage from "../../assets/IMG_2584 1.png";
 // Empty for now but could be our own webpage sometime
 export default function SignUp() {
   const [email, setEmail] = useState("");
+  const [submit, setSubmit] = useState(false);
 
   const alert = useContext(alertContext);
 
-  const submitForm = async () => {
+  const submitForm = useCallback(async () => {
     try {
       const res = await addApplicant(email);
       alert("info", res);
@@ -17,7 +18,14 @@ export default function SignUp() {
       if (!(error instanceof Error)) return;
       alert("warning", error.toString());
     }
-  };
+  }, [email, alert]);
+
+  useEffect(() => {
+    if (submit) {
+      submitForm();
+      setSubmit(false); //eslint-disable-line react-hooks/set-state-in-effect
+    }
+  }, [email, submit, submitForm]);
 
   return (
     <div className="flex-1 flex min-h-[90vh]">
@@ -51,8 +59,9 @@ export default function SignUp() {
           </fieldset>
           <button
             className="btn btn-primary btn-lg w-1/3 self-end"
-            onClick={() => {
-              submitForm();
+            onClick={(e) => {
+              e.currentTarget.focus();
+              setSubmit(true);
             }}
           >
             Submit
