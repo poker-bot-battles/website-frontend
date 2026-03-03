@@ -1,16 +1,15 @@
-import { useCallback, useContext, useEffect, useState } from "react";
-import { addApplicant } from "../../firebase/firestore";
-import { alertContext } from "../../common/useAlert/AlertContext";
-import backgroundImage from "../../assets/IMG_2584 1.png";
+import { useContext, useState } from "react";
+import { addApplicant } from "@/firebase/firestore";
+import { alertContext } from "@common/useAlert/AlertContext";
+import backgroundImage from "@images/IMG_2584 1.png";
 
 // Empty for now but could be our own webpage sometime
 export default function SignUp() {
   const [email, setEmail] = useState("");
-  const [submit, setSubmit] = useState(false);
 
   const alert = useContext(alertContext);
 
-  const submitForm = useCallback(async () => {
+  const submitForm = async () => {
     try {
       const res = await addApplicant(email);
       alert("info", res);
@@ -18,14 +17,7 @@ export default function SignUp() {
       if (!(error instanceof Error)) return;
       alert("warning", error.toString());
     }
-  }, [email, alert]);
-
-  useEffect(() => {
-    if (submit) {
-      submitForm();
-      setSubmit(false); //eslint-disable-line react-hooks/set-state-in-effect
-    }
-  }, [email, submit, submitForm]);
+  };
 
   return (
     <div className="flex-1 flex min-h-[90vh]">
@@ -42,9 +34,11 @@ export default function SignUp() {
               className="input input-primary input-lg w-full"
               type="email"
               onChange={(e) => {
+                console.log(e.target.value);
                 setEmail(e.target.value);
               }}
               placeholder="your@mail.here"
+              value={email}
             />
             <p className="text-sm text-neutral max-w-[52em]">
               Don't worry. We don't use your email for anything else than to see
@@ -59,10 +53,7 @@ export default function SignUp() {
           </fieldset>
           <button
             className="btn btn-primary btn-lg w-1/3 self-end"
-            onClick={(e) => {
-              e.currentTarget.focus();
-              setSubmit(true);
-            }}
+            onClick={() => submitForm()}
           >
             Submit
           </button>
