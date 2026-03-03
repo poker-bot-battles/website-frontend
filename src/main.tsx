@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./routes/App.tsx";
 import Documentation from "./routes/documentation/Documentation.tsx";
 import GetStarted from "./routes/get-started/GetStarted.tsx";
-import { BrowserRouter, Route, Routes } from "react-router";
+import { HashRouter, Route, Routes } from "react-router";
 import SignUp from "./routes/sign-up/SignUp.tsx";
 import Submit from "./routes/submit/Submit.tsx";
 import Layout from "./routes/Layout.tsx";
@@ -12,7 +12,7 @@ import ScrollToTop from "./common/ScrollTop.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -24,6 +24,6 @@ createRoot(document.getElementById("root")!).render(
           <Route path="/admin-panel" element={<App />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>,
 );
