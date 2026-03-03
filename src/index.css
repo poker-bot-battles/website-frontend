@@ -84,7 +84,9 @@
   --font-text: "BDO Grotesk", "Inter", sans-serif;
 }
 
+/* Base Layer */
 @layer base {
+  /* Semantic Defaults */
   h1 {
     @apply text-5xl;
     margin-top: 4rem;
@@ -106,7 +108,6 @@
   }
 
   p {
-    @apply text-lg;
     @apply font-text;
     margin-bottom: 0.5rem;
   }
@@ -151,23 +152,9 @@
   .fill-base-content {
     fill: var(--color-base-content);
   }
+}
 
-  .flex-right {
-    @apply flex;
-  }
-
-  .flex-down {
-    @apply flex;
-    @apply flex-col;
-  }
-
-  .flex-left {
-    @apply flex;
-    @apply flex-row-reverse;
-  }
-
-  .flex-up {
-    @apply flex;
-    @apply flex-col-reverse;
-  }
+@utility flex-down {
+  display: flex;
+  flex-direction: column;
 }

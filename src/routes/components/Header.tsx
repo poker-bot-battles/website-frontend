@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import LightModeIcon from "@icons/lightMode.svg?react";
 import NightModeIcon from "@icons/nightMode.svg?react";
 import LogoFlatDark from "@icons/logoIconFlatDark.svg?react";
+import BurgerIcon from "@icons/burger.svg?react";
 import { useState } from "react";
 
 export default function Header(props: {
@@ -45,8 +46,11 @@ export default function Header(props: {
       <input id="my-drawer-1" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
         {/* Page content here */}
-        <label htmlFor="my-drawer-1" className="btn drawer-button">
-          Open drawer
+        <label
+          htmlFor="my-drawer-1"
+          className="btn btn-ghost btn-square drawer-button"
+        >
+          <BurgerIcon className="fill-base-content" />
         </label>
       </div>
       <div className="drawer-side bg-base-100 grid place-items-center">

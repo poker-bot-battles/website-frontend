@@ -11,7 +11,7 @@ export default function PointOfSale() {
           <img src={communityImage} className="h-full w-full object-cover" />
         </div>
         <div className="relative flex-down items-end z-10 p-4">
-          <h3 className="font-display-alternative text-6xl text-primary">
+          <h3 className="font-display-alternative text-4xl lg:text-6xl text-primary">
             Join our Community
           </h3>
           <p>
@@ -28,7 +28,7 @@ export default function PointOfSale() {
           <img src={freeImage} className="h-full w-full object-cover" />
         </div>
         <div className="relative flex-down z-10 p-4">
-          <h3 className="font-display-alternative text-6xl text-primary">
+          <h3 className="font-display-alternative text-4xl lg:text-6xl text-primary">
             It's absolutely free!
           </h3>
           <p>
@@ -43,7 +43,7 @@ export default function PointOfSale() {
           <img src={community2Image} className="h-full w-full object-cover" />
         </div>
         <div className="relative flex-down items-end z-10 p-4">
-          <h3 className="font-display-alternative text-6xl text-primary">
+          <h3 className="font-display-alternative text-4xl lg:text-6xl text-primary">
             Not convinced?
           </h3>
           <p>

@@ -6,7 +6,7 @@ import { Link } from "react-router";
 
 export const Footer = () => {
   return (
-    <footer className="footer sm:footer-horizontal justify-items-center bg-base-200 text-base-content p-10 ">
+    <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10 ">
       <aside className="w-full h-full flex items-center justify-center">
         <PokerBotLogo className="w-[80px] h-[80px]" />
         <h3>Pokerbot</h3>
@@ -30,7 +30,7 @@ export const Footer = () => {
           href="https://github.com/poker-bot-battles"
           className="link link-hover"
         >
-          <GithubLogo className="fill-base-content w-[24px] h-[24px] inline m-2 box-content" />
+          <GithubLogo className="*:fill-base-content w-[24px] h-[24px] inline m-2 box-content" />
           Github
         </a>
       </nav>

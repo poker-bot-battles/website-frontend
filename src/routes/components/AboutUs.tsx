@@ -13,7 +13,7 @@ export default function AboutUs() {
           Who are we?
         </h2>
         <div className="flex w-full gap-8 flex-wrap justify-center">
-          <div className="flex-down gap-4 w-3xs">
+          <div className="flex-down gap-4 w-2/5 sm:w-3xs">
             <img src={cat1} className="rounded-2xl" />
             <div className="flex-down">
               <p className="font-display-alternative text-2xl m-0">
@@ -22,7 +22,7 @@ export default function AboutUs() {
               <p>Chair</p>
             </div>
           </div>
-          <div className="flex-down gap-4 w-3xs">
+          <div className="flex-down gap-4 w-2/5 sm:w-3xs">
             <img src={cat6} className="rounded-2xl aspect-square" />
             <div className="flex-down">
               <p className="font-display-alternative text-2xl m-0">
@@ -31,7 +31,7 @@ export default function AboutUs() {
               <p>Vice-Chair</p>
             </div>
           </div>
-          <div className="flex-down gap-4 w-3xs">
+          <div className="flex-down gap-4 w-2/5 sm:w-3xs">
             <img src={cat2} className="rounded-2xl" />
             <div className="flex-down">
               <p className="font-display-alternative text-2xl m-0">
@@ -40,7 +40,7 @@ export default function AboutUs() {
               <p>Treasurer</p>
             </div>
           </div>
-          <div className="flex-down gap-4 w-3xs">
+          <div className="flex-down gap-4 w-2/5 sm:w-3xs">
             <img src={cat3} className="rounded-2xl" />
             <div className="flex-down">
               <p className="font-display-alternative text-2xl m-0">
@@ -49,7 +49,7 @@ export default function AboutUs() {
               <p>Marketing</p>
             </div>
           </div>
-          <div className="flex-down gap-4 w-3xs">
+          <div className="flex-down gap-4 w-2/5 sm:w-3xs">
             <img src={cat4} className="rounded-2xl" />
             <div className="flex-down">
               <p className="font-display-alternative text-2xl m-0">
@@ -58,7 +58,7 @@ export default function AboutUs() {
               <p>Head of funding</p>
             </div>
           </div>
-          <div className="flex-down gap-4 w-3xs">
+          <div className="flex-down gap-4 w-2/5 sm:w-3xs">
             <img src={cat5} className="rounded-2xl" />
             <div className="flex-down">
               <p className="font-display-alternative text-2xl m-0">

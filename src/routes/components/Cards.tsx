@@ -5,16 +5,14 @@ import { Link } from "react-router";
 
 export default function Cards() {
   return (
-    <div className="flex-down gap-8 p-4 lg:p-16 z-10 min-h-[50vh] lg:flex-row max-w-screen">
-      <div className="bg-base-200 flex-1 p-8 rounded-2xl flex flex-col gap-4">
+    <div className="flex gap-8 p-[2%] flex-wrap">
+      <div className="card p-8 bg-base-200 flex-1 basis-md">
         <CodeIcon
           height={80}
           width={80}
           className="self-end fill-base-content"
         />
-        <p className="font-text font-bold text-4xl m-0">
-          Show Off Your Algorithmic Prowess
-        </p>
+        <h2 className="font-bold mt-0">Show Off Your Algorithmic Prowess</h2>
         <p>
           Test your skills against other ITU students by creating a
           poker-playing algorithm, and use it to battle it on our homemade
@@ -24,7 +22,7 @@ export default function Cards() {
           Languages include ones you've (probably) already encountered. We have
           documentation in both Python and Java for the lowest barrier to entry
         </p>
-        <div className="flex flex-1 items-end justify-end py-8">
+        <div className="flex flex-1 items-end justify-end py-8 ">
           <Link
             to={"/documentation"}
             className="link link-primary text-xl font-bold btn-lg"
@@ -33,15 +31,15 @@ export default function Cards() {
           </Link>
         </div>
       </div>
-      <div className="bg-base-200 flex-1 py-8 px-16 rounded-2xl flex flex-col gap-4">
+      <div className="card p-8 bg-base-200 flex-1 basis-md">
         <PokerIcon
           height={80}
           width={80}
           className="self-end fill-base-content"
         />
-        <p className="font-text font-bold text-4xl m-0">
+        <h2 className="font-bold mt-0">
           A Classic Game of No Limit Texas Holdem
-        </p>
+        </h2>
         <p>
           You and your robot will be playing standard games of No Limit Texas
           Holdem on our digital pokertable.
@@ -58,15 +56,13 @@ export default function Cards() {
           </p>
         </div>
       </div>
-      <div className="bg-primary text-primary-content flex-1 p-8 rounded-2xl flex flex-col gap-4">
+      <div className="card p-8 bg-primary text-primary-content flex-1 basis-md">
         <BeerIcon
           height={80}
           width={80}
           className="self-end fill-primary-content"
         />
-        <p className="font-text font-bold text-4xl m-0">
-          Win Prices, Drink Beer, and Have Fun
-        </p>
+        <h2 className="font-bold mt-0">Win Prices, Drink Beer, and Have Fun</h2>
         <p>
           The best of the bots win prices such as your own cards, pokerset. And
           if you're not in the top there's still opportunity to get free beer.
