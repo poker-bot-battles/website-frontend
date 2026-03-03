@@ -1,9 +1,8 @@
-import { Link, Outlet } from "react-router";
+import { Outlet } from "react-router";
 import { useEffect, useState } from "react";
 import AlertProvider from "../common/useAlert/AlertProvider";
 import Header from "./components/Header";
-
-// Abstract the header to its own component
+import { Footer } from "./components/Footer";
 
 export default function Layout() {
   const [currentTheme, setCurrentTheme] = useState(
@@ -33,40 +32,7 @@ export default function Layout() {
           <Outlet />
         </main>
       </AlertProvider>
-      <footer className="flex p-8 bg-base-200">
-        <div className="flex-1">
-          <h3>Contact</h3>
-          <p className="text-base">gtak@itu.dk</p>
-          <h3>Projects</h3>
-          <p className="text-base">
-            <a
-              href="https://github.com/poker-bot-battles?view_as=public"
-              className="link"
-            >
-              Pokerbot GitHub
-            </a>
-          </p>
-        </div>
-        <div className=""></div>
-        <div className="flex-1 flex-down gap-2">
-          <h3>Links</h3>
-          <Link className="link" to="/">
-            Home
-          </Link>
-          <Link className="link" to="/documentation">
-            Documentation
-          </Link>
-          <Link className="link" to="/get-started">
-            Get Started
-          </Link>
-          <Link className="link" to="/sign-up">
-            Sign Up
-          </Link>
-          <Link className="link" to="/submit">
-            Submit Code
-          </Link>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
