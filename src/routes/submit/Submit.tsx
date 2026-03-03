@@ -28,8 +28,8 @@ export default function Submit() {
     data.append("table", formData.table);
 
     if (
-      formData.fileName?.endsWith(".py") ||
-      formData.fileName?.endsWith(".java")
+      !formData.fileName?.endsWith(".py") ||
+      !formData.fileName?.endsWith(".java")
     ) {
       alert("error", "wrong file type");
       return;
