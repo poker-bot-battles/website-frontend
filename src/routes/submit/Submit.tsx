@@ -9,8 +9,10 @@ export default function Submit() {
     email?: string;
     file?: File;
     fileName?: string;
-    table?: string;
-  }>({});
+    table: string;
+  }>({ table: "1" });
+
+  console.log(formData);
 
   const submitForm = async () => {
     const baseURL = "https://api.pokerbot.dk";
@@ -59,8 +61,9 @@ export default function Submit() {
               className="input input-lg input-primary w-full"
               type="email"
               placeholder="your@mail.here"
+              value={formData.email}
               onChange={(e) => {
-                setFormData(Object.assign(formData, { email: e.target.value }));
+                setFormData({ ...formData, email: e.target.value });
               }}
             />
             <legend className="fieldset-legend">Your Program </legend>
@@ -69,6 +72,7 @@ export default function Submit() {
               type="file"
               accept=".py, .java"
               multiple={false}
+              value={formData.fileName || ""}
               onChange={(e) => {
                 setFormData(
                   Object.assign({}, formData, {
@@ -81,8 +85,9 @@ export default function Submit() {
             <legend className="fieldset-legend">Your Program </legend>
             <select
               className="select input-lg input-primary w-full"
+              value={formData.table}
               onChange={(e) => {
-                setFormData(Object.assign(formData, { table: e.target.value }));
+                setFormData({ ...formData, table: e.target.value });
               }}
             >
               <option value="1">Table 1</option>
