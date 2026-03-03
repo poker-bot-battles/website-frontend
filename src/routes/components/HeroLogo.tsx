@@ -1,4 +1,4 @@
-import QuackSound from "../../assets/quack.mp3";
+import QuackSound from "@sounds/quack.mp3";
 
 export default function HeroLogo() {
   const quackAudio = new Audio(QuackSound);

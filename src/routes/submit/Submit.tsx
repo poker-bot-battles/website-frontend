@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
-import { alertContext } from "../../common/useAlert/AlertContext";
-import backgroundImage from "../../assets/IMG_2584 1.png";
+import { alertContext } from "@common/useAlert/AlertContext";
+import backgroundImage from "@images/IMG_2584 1.png";
 
 export default function Submit() {
   const alert = useContext(alertContext);

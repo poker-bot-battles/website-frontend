@@ -1,9 +1,9 @@
-import cat1 from "../../assets/cat1.png";
-import cat2 from "../../assets/cat2.png";
-import cat3 from "../../assets/cat3.png";
-import cat4 from "../../assets/cat4.png";
-import cat5 from "../../assets/cat5.png";
-import cat6 from "../../assets/cat6.png";
+import cat1 from "@/assets/images/cat1.png";
+import cat2 from "@/assets/images/cat2.png";
+import cat3 from "@/assets/images/cat3.png";
+import cat4 from "@/assets/images/cat4.png";
+import cat5 from "@/assets/images/cat5.png";
+import cat6 from "@/assets/images/cat6.png";
 
 export default function AboutUs() {
   return (

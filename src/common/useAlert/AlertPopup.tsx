@@ -1,5 +1,5 @@
 import type { AlertData } from "./AlertContext";
-import CloseIcon from "../../assets/close.svg?react";
+import CloseIcon from "@icons/close.svg?react";
 
 const DEFAULT_EXPIRATION_MS = 10000;
 

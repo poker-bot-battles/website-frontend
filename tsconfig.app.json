@@ -22,7 +22,21 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* Aliases */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
+      "@common/*": ["src/common/*"],
+      "@routes/*": ["src/routes/*"],
+      "@images/*": ["src/assets/images/*"],
+      "@icons/*": ["src/assets/icons/*"],
+      "@sounds/*": ["src/assets/sounds/*"], 
+      "@fonts/*": ["src/assets/fonts/*"]
+    },
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["node_modules, dist"]
 }
