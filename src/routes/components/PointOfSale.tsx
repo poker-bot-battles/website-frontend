@@ -15,9 +15,10 @@ export default function PointOfSale() {
             Join our Community
           </h3>
           <p>
-            Something about the fact that it is really fun to do this with{" "}
-            <br />
-            people and be part of a community
+            Come alone or in a group to one of the biggest ITU events of the
+            year. <br />
+            Meet new people, have fun, and learn a lot about programming and
+            poker!
           </p>
         </div>
       </div>
@@ -45,7 +46,11 @@ export default function PointOfSale() {
           <h3 className="font-display-alternative text-6xl text-primary">
             Not convinced?
           </h3>
-          <p>Then I actually dont know what to say</p>
+          <p>
+            By participating you will not only join a great event <br />
+            but just by signing up you are guaranteed <b>TWO</b> free beers at
+            the event! <br />
+          </p>
         </div>
       </div>
     </div>

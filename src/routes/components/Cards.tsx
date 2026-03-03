@@ -21,9 +21,8 @@ export default function Cards() {
           server.
         </p>
         <p>
-          Languages include ones you&#0027;ve (probably) already encountered. We
-          have documentation in both Python and Java for the lowest barrier to
-          entry
+          Languages include ones you've (probably) already encountered. We have
+          documentation in both Python and Java for the lowest barrier to entry
         </p>
         <div className="flex flex-1 items-end justify-end py-8">
           <Link
@@ -70,10 +69,10 @@ export default function Cards() {
         </p>
         <p>
           The best of the bots win prices such as your own cards, pokerset. And
-          if you’re not in the top there’s still opportunity to get free beer.
+          if you're not in the top there's still opportunity to get free beer.
         </p>
         <p>
-          Having fun is not a requirement but is hopefully comes naturally when
+          Having fun is not a requirement but hopefully comes naturally when
           friends, alcohol, and gambling are involved.
         </p>
         <div className="flex flex-1 items-end justify-center py-8">
