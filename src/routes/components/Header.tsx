@@ -7,11 +7,12 @@ export default function Header(props: {
   onThemeChange: () => void;
 }) {
   return (
-    <header className="flex px-8 py-4 bg-base-200 items-center z-50">
-      <Link to={"/"} className="flex-1 font-display m-0 h-fit">
+    <header className="navbar bg-base-200 p-4">
+      {/* Make responsive */}
+      <Link to={"/"} className="navbar-start">
         Poker <span className="text-primary">Bot</span> Battles
       </Link>
-      <div className="flex gap-2">
+      <div className="navbar-end gap-2">
         <Link to={"/sign-up"} className="btn btn-primary">
           Sign Up
         </Link>

@@ -33,10 +33,7 @@ export default function SignUp() {
             <input
               className="input input-primary input-lg w-full"
               type="email"
-              onChange={(e) => {
-                console.log(e.target.value);
-                setEmail(e.target.value);
-              }}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="your@mail.here"
               value={email}
             />

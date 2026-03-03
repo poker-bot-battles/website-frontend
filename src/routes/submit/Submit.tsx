@@ -27,25 +27,30 @@ export default function Submit() {
     data.append("file", formData.file);
     data.append("table", formData.table);
 
+    if (
+      formData.fileName?.endsWith(".py") ||
+      formData.fileName?.endsWith(".java")
+    ) {
+      alert("error", "wrong file type");
+      return;
+    }
+
     const extension = formData.fileName?.endsWith(".py") ? ".py" : ".java";
 
-    try {
-      await fetch(
-        baseURL +
-          "/upload/" +
-          formData.table +
-          "/" +
-          formData.email +
-          extension,
-        {
-          method: "POST",
-          body: data,
-        },
-      );
-      alert("info", "File Uploaded successfully");
-    } catch (error) {
-      alert("error", "An error occurred: " + error);
+    const res = await fetch(
+      baseURL + "/upload/" + formData.table + "/" + formData.email + extension,
+      {
+        method: "POST",
+        body: data,
+      },
+    );
+
+    if (res.status !== 200) {
+      alert("error", "An error occurred: " + (await res.text()));
+      return;
     }
+
+    alert("info", "File Uploaded successfully");
   };
 
   return (
