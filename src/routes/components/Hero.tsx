@@ -1,15 +1,23 @@
 import { Link } from "react-router";
-import HeroBackground from "./HeroBackground";
-import HeroDesc from "./HeroDesc";
-import HeroLogo from "./HeroLogo";
+
+import backgroundImage from "@images/IMG_2584 1.png";
+import LogoDark from "@icons/pokerbotDark.svg?react";
 
 export default function Hero() {
   return (
-    <div className="relative h-[70vh] shrink-0">
-      <HeroBackground />
-      <div className="flex-down justify-center w-screen flex-1 gap-4 px-12 lg:px-24 z-10 relative h-full @container">
-        <HeroLogo />
-        <HeroDesc />
+    <div className="hero h-[70vh] shrink-0">
+      <div
+        className="hero-overlay h-[150%] bg-cover"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      >
+        <div className="h-full w-full bg-linear-to-b from-transparent to-base-100" />
+      </div>
+      <div className="hero-content flex-col items-start w-full">
+        <LogoDark className="w-full h-fit" />
+        <p className="text-xl">
+          A classic game No Limit Texas Holdem <br />
+          where everyone is a robot
+        </p>
         <div className="flex gap-2">
           <Link to={"/get-started"} className="btn btn-primary btn-lg">
             Get Started

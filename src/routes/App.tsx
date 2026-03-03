@@ -1,6 +1,6 @@
 import AboutUs from "./components/AboutUs";
 import Cards from "./components/Cards";
-import Hero from "./components/Hero";
+import Hero from "@/routes/components/Hero";
 import PointOfSale from "./components/PointOfSale";
 
 export default function App() {

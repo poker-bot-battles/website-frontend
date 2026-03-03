@@ -1,10 +1,11 @@
 import { Outlet } from "react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import AlertProvider from "../common/useAlert/AlertProvider";
 import Header from "./components/Header";
 import { Footer } from "./components/Footer";
 
 export default function Layout() {
+  const htmlElement = useRef(document.querySelector("html"));
   const [currentTheme, setCurrentTheme] = useState(
     localStorage.getItem("theme")
       ? localStorage.getItem("theme") == "dark"
@@ -14,9 +15,10 @@ export default function Layout() {
   useEffect(() => {
     localStorage.setItem("theme", currentTheme ? "dark" : "light");
 
-    document
-      .querySelector("html")
-      ?.setAttribute("data-theme", currentTheme ? "dark" : "light");
+    htmlElement.current?.setAttribute(
+      "data-theme",
+      currentTheme ? "dark" : "light",
+    );
   }, [currentTheme]);
 
   return (
