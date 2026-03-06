@@ -295,6 +295,13 @@ export default function Documentation() {
           )}
         </div>
         <h2>2. Testing your bot</h2>
+        <iframe
+          src="https://scribehow.com/embed/Testing_and_benchmarking_your_pokerbot__yFAccnLLTymMt-vNEWvi2A?as=scrollable&skipIntro=true"
+          width="100%"
+          height="640"
+          allowFullScreen
+          frameBorder="0"
+        ></iframe>
         <p>
           If you have any questions just ask us at the event.
           <br />
