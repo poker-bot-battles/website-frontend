@@ -103,8 +103,6 @@ export default function Submit() {
               <option value="6">Table 6</option>
               <option value="7">Table 7</option>
               <option value="8">Table 8</option>
-              <option value="9">Table 9</option>
-              <option value="10">Table 10</option>
             </select>
           </fieldset>
           <button
