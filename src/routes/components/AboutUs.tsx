@@ -2,7 +2,6 @@ import cat1 from "@/assets/images/cat1.png";
 import cat2 from "@/assets/images/cat2.png";
 import cat3 from "@/assets/images/cat3.png";
 import cat4 from "@/assets/images/cat4.png";
-import cat5 from "@/assets/images/cat5.png";
 import cat6 from "@/assets/images/cat6.png";
 
 export default function AboutUs() {
@@ -35,18 +34,9 @@ export default function AboutUs() {
             <img src={cat2} className="rounded-2xl" />
             <div className="flex-down">
               <p className="font-display-alternative text-2xl m-0">
-                Andreas Nygaard Schiøtt
+                Ellie Kulmbak
               </p>
-              <p>Treasurer</p>
-            </div>
-          </div>
-          <div className="flex-down gap-4 w-2/5 sm:w-3xs">
-            <img src={cat3} className="rounded-2xl" />
-            <div className="flex-down">
-              <p className="font-display-alternative text-2xl m-0">
-                August Bugge
-              </p>
-              <p>Marketing</p>
+              <p>Head of Design & Treasurer</p>
             </div>
           </div>
           <div className="flex-down gap-4 w-2/5 sm:w-3xs">
@@ -59,7 +49,7 @@ export default function AboutUs() {
             </div>
           </div>
           <div className="flex-down gap-4 w-2/5 sm:w-3xs">
-            <img src={cat5} className="rounded-2xl" />
+            <img src={cat3} className="rounded-2xl" />
             <div className="flex-down">
               <p className="font-display-alternative text-2xl m-0">
                 Tobias Mondrup Holm
