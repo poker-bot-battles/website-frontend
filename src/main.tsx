@@ -13,6 +13,7 @@ import GetStarted from "./routes/get-started/GetStarted.tsx";
 import SignUp from "./routes/sign-up/SignUp.tsx";
 import Submit from "./routes/submit/Submit.tsx";
 import Layout from "./routes/Layout.tsx";
+import { VisualCodespace } from "./routes/visual-codespace/VisualCodespace.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -29,6 +30,7 @@ createRoot(document.getElementById("root")!).render(
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/submit" element={<Submit />} />
           <Route path="/admin-panel" element={<App />} />
+          <Route path="/visual-codespace" element={<VisualCodespace />} />
         </Route>
       </Routes>
     </HashRouter>
