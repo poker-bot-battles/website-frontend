@@ -6,6 +6,7 @@ import createTheme from "./createTheme";
 export const InitWorkspace = (element: HTMLElement) => {
   return inject(element, {
     theme: createTheme(element),
+    move: { drag: true, wheel: true },
     toolbox: {
       kind: "categoryToolbox",
       contents: [

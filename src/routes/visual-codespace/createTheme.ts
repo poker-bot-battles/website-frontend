@@ -12,6 +12,7 @@ export default (element: HTMLElement): Theme => {
       toolboxForegroundColour: style.getPropertyValue("--color-base-content"),
       flyoutBackgroundColour: style.getPropertyValue("--color-base-200"),
       flyoutForegroundColour: style.getPropertyValue("--color-base-content"),
+      scrollbarOpacity: Number.MIN_VALUE,
     },
   });
 };

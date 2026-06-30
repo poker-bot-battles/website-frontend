@@ -16,23 +16,23 @@ import Layout from "./routes/Layout.tsx";
 import { VisualCodespace } from "./routes/visual-codespace/VisualCodespace.tsx";
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <HashRouter>
-      {/* Hooks */}
-      <ScrollToTop />
+  // <StrictMode>
+  <HashRouter>
+    {/* Hooks */}
+    <ScrollToTop />
 
-      {/* Routes */}
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<App />} />
-          <Route path="/documentation" element={<Documentation />} />
-          <Route path="/get-started" element={<GetStarted />} />
-          <Route path="/sign-up" element={<SignUp />} />
-          <Route path="/submit" element={<Submit />} />
-          <Route path="/admin-panel" element={<App />} />
-          <Route path="/visual-codespace" element={<VisualCodespace />} />
-        </Route>
-      </Routes>
-    </HashRouter>
-  </StrictMode>,
+    {/* Routes */}
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<App />} />
+        <Route path="/documentation" element={<Documentation />} />
+        <Route path="/get-started" element={<GetStarted />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/submit" element={<Submit />} />
+        <Route path="/admin-panel" element={<App />} />
+        <Route path="/visual-codespace" element={<VisualCodespace />} />
+      </Route>
+    </Routes>
+  </HashRouter>,
+  // </StrictMode>,
 );

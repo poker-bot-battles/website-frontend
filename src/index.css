@@ -86,6 +86,10 @@
 
 /* Base Layer */
 @layer base {
+  .blocklyMainBackground {
+    border: 0;
+  }
+
   /* Semantic Defaults */
   h1 {
     @apply text-5xl;
