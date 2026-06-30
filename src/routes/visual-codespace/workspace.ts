@@ -1,9 +1,11 @@
 import { inject } from "blockly";
 import defaultCategories from "./defaultCategories";
 import "./blocks";
+import createTheme from "./createTheme";
 
 export const InitWorkspace = (element: HTMLElement) => {
   return inject(element, {
+    theme: createTheme(element),
     toolbox: {
       kind: "categoryToolbox",
       contents: [
