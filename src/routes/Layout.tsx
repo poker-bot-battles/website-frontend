@@ -4,6 +4,11 @@ import AlertProvider from "../common/useAlert/AlertProvider";
 import Header from "./components/Header";
 import { Footer } from "./components/Footer";
 
+/**
+ * The layout element that wraps all routes
+ * @returns Layout Element
+ */
+
 export default function Layout() {
   const htmlElement = useRef(document.querySelector("html"));
   const [currentTheme, setCurrentTheme] = useState(
