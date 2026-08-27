@@ -1,7 +1,5 @@
 import newBlock from "./newBlock";
 
-console.log("called");
-
 newBlock({
   definition: {
     type: "play_fold",
