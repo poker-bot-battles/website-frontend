@@ -1,0 +1,16 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPointStrategy": "expand",
+  "entryPoints": ["src/*"],
+  "out": "doc",
+  "theme": "default",
+  // "documentationUrl": "https://your-site.com",
+  "readme": "README.md",
+  "excludePrivate": true,
+  "excludeInternal": true,
+  "excludeExternals": true,
+  // "hideInPageTOC": false,
+  "logLevel": "Info",
+  "disableSources": false,
+  "searchInComments": true
+}
